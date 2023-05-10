@@ -1,4 +1,4 @@
 module.exports = {
- app_name: "橙意文档",
- logo_src: "fold.png", // 首页logo
+ app_name: "我的文档",
+ logo_src: "", // 首页logo
 }
