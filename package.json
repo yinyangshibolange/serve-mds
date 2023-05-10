@@ -1,0 +1,15 @@
+{
+  "name": "ssr-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "hongyu",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "marked": "^5.0.1",
+    "md5": "^2.3.0",
+    "mime": "^3.0.0"
+  }
+}
