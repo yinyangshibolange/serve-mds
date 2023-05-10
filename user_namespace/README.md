@@ -25,8 +25,3 @@ npm i
 node index
 或者使用pm2进行管理
 ```
-
-
-![image](static/s1.png)
-
-![image](static/s2.png)

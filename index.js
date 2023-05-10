@@ -180,7 +180,7 @@ const passwords = []
 
 async function setPasswords () {
  const rl = readline.createInterface({
-  input: fs.createReadStream(".passwords"),
+  input: fs.createReadStream("user_namespace/.passwords"),
   crlfDelay: Infinity
  })
  rl.on('line', (line) => {
@@ -224,7 +224,7 @@ server.on('request', function (request, response) {
   if (validate_password(request.headers.cookie)) {
    response.write("<head><meta charset='utf-8'></head>")
    const csslink = '<link rel="stylesheet" type="text/css" href="sspai.css"><link rel="stylesheet" type="text/css" href="common.css">'
-   const str = fs.readFileSync("./mds/README.md").toString()
+   const str = fs.readFileSync("./user_namespace/README.md").toString()
    // 正则match
    const html = `<div id="markdown_container">
    ${marked(str)}
@@ -247,7 +247,7 @@ server.on('request', function (request, response) {
   response.end()
  } else if (url === '/hi.html') {
   // const str = fs.readFileSync("./hi.html")
-  response.end(renderTemplate("./hi.html", require("./config")))
+  response.end(renderTemplate("./hi.html", require("./user_namespace/config")))
  } else {
   readStaticFiles(request, response)
  }
