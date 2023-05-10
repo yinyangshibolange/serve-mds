@@ -12,6 +12,7 @@ const crypto = require("crypto")
 const readline = require('readline');
 const events = require('events');
 const md5 = require("md5")
+const config = require("./user_namespace/config")
 
 Date.prototype.Format = function (fmt) {
  var o = {
@@ -247,14 +248,13 @@ server.on('request', function (request, response) {
   response.end()
  } else if (url === '/hi.html') {
   // const str = fs.readFileSync("./hi.html")
-  response.end(renderTemplate("./hi.html", require("./user_namespace/config")))
+  response.end(renderTemplate("./hi.html", config))
  } else {
   readStaticFiles(request, response)
  }
 })
 
 //绑定端口号 启动服务
-server.listen(9988, function () {
- console.log('已经开启您的http服务器')
- console.log('访问地址：http:127.0.0.1:9988/')
+server.listen(config.app_port, function () {
+ console.log(`访问地址：http:127.0.0.1:${config.app_port}/`)
 })

@@ -140,3 +140,7 @@ color: #f22f2799;
  line-height: 39px;
  font-size: 15px;
 }
+
+.hi-container .auth_form >button:hover {
+ opacity: 0.7;
+}
