@@ -1,7 +1,5 @@
 # 带密码验证的文档编辑器
 
-## 使用node搭建服务器（静态项目无法对文档进行有效的保护）
-
 ## 密码在userspace/.passwords文件中
 
 ## 首页配置在userspace/config.js文件中，可配置name和logo
@@ -28,13 +26,8 @@ node index
 或者使用pm2进行管理
 ```
 
-6. 效果如下图所示
+## markdown链接
 
-![image](static/s1.png)
+<a href="/mds-tech--index" target="_blank">链接到tech/index.md（新标签页）</a>
 
-![image](static/s2.png)
-
-
-## 部署
-1. 由于是ssr，那么服务器一定要有node环境，可以使用宝塔面板安装pm2管理器，也可以在宝塔面板网站管理中添加node项目，windows系统请在项目目录下运行node index命令
-2. linux命令行运行: 执行`bin/www`
+[链接到haha（当前页面）](/mds-haha)
