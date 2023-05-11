@@ -222,6 +222,7 @@ function validate_password (cookie) {
 server.on('request', function (request, response) {
  const url = request.url //端口号后面的那一部分
  if (url === '/' || url === '/md') {
+  response.setHeader('Cache-Control', 'no-cache'); // ⑤
   if (validate_password(request.headers.cookie)) {
    response.write("<head><meta charset='utf-8'></head>")
    const csslink = '<link rel="stylesheet" type="text/css" href="sspai.css"><link rel="stylesheet" type="text/css" href="common.css">'
@@ -241,6 +242,7 @@ server.on('request', function (request, response) {
   const password = getQueryString("password", url)
   if (passwords.includes(password)) {
    response.setHeader('Set-Cookie', ['pass=' + getPassordMd(password), 'a=1']); // ⑤
+   response.setHeader('Cache-Control', 'no-cache'); // ⑤
    response.writeHead(301, { 'Location': '/md' });
   } else {
    response.writeHead(301, { 'Location': '/hi.html' });
