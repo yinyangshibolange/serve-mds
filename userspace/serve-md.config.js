@@ -14,5 +14,5 @@ module.exports = {
  // todo
  admin_password: 'ccc1942q123s', // 管理员密码，可以进行密码管理，通过修改.passwords文件,必须有管理员cookie
  // 密码管理todo，暂未实现
- static_fold: '../static', // 你的静态文件资源站,不要将项目根目录作为静态资源站，会很危险哦
+ static_fold: '', // 你的静态文件资源站,不要将项目根目录作为静态资源站，会很危险哦
 }

@@ -31,3 +31,5 @@ node index
 <a href="/mds-tech--index" target="_blank">链接到tech/index.md（新标签页）</a>
 
 [链接到haha（当前页面）](/mds-haha)
+
+[webindexdb](/mds-webindexdb)

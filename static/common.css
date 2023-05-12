@@ -11,6 +11,7 @@ html,body {
 #main {
  padding-left: 20rem;
  transition: padding-left 0.28s ease-in-out;
+	min-height: 100%;
 }
 
 #main.fold {
@@ -18,11 +19,11 @@ html,body {
 }
 
 #main.fold .menu_tree {
- width: 0;
+ transform: translateX(-100%);
 }
 
 .menu_tree {
- transition: width 0.28s ease-in-out;
+ transition: all 0.28s ease-in-out;
  position: fixed;
  left: 0;
  width: 20rem;
@@ -36,23 +37,26 @@ html,body {
 
 .menu_tree ul {
  list-style: none;
- /* padding:0; */
- /* margin:0; */
+ padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+ margin:0;
 }
 
 .menu_tree li {
- /* margin:0; */
- /* padding: 10px 20px; */
+ margin:0;
+ padding: 0;
 }
 
 .menu_tree ul a {
  display: block;
+	padding: 0.3rem 0.3rem 0.3rem 0;
 }
 
 .menu_tree ul a.active {
  border-right: 2px solid #f22f27;
 }
-.menu_tree .fold_img{
+ .fold_img{
  position: fixed;
  bottom: 0;
  left:0;
@@ -66,17 +70,17 @@ html,body {
  cursor: pointer;
 	z-index: 333;
 }
-.menu_tree .fold_img:hover >img{
+ .fold_img:hover >img{
  opacity: 0.7;
 }
-.menu_tree .fold_img>img {
+ .fold_img>img {
  width: 1.55rem;
  margin: 0;
 }
 
 #markdown_container {
  /* padding: 2.1rem 3.5rem 2.1rem 6.3rem; */
-	padding: 5%;
+	padding: 2% 5%;
 }
 
 

@@ -1,15 +1,23 @@
 {
   "name": "ssr-demo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "bin/serve-md",
+  "bin": {
+    "serve-md": "bin/serve-md"
+  },
   "author": "hongyu",
   "license": "MIT",
   "scripts": {
     "start": "node index"
   },
   "dependencies": {
+    "chalk": "^4.0.0",
     "marked": "^5.0.1",
     "md5": "^2.3.0",
     "mime": "^3.0.0"
+  },
+  "devDependencies": {
+    "yargonaut": "^1.1.4",
+    "yargs": "^17.7.2"
   }
 }

@@ -33,6 +33,7 @@
    el.addEventListener("click", function (ev) {
     removeWindowScrollListener()
     setAActive(el)
+
     siv(getQueryString("id", el.href))
     if (timer1) clearTimeout(timer1)
     timer1 = setTimeout(() => {
@@ -48,6 +49,7 @@
    if (timer) clearTimeout(timer)
    timer = setTimeout(() => {
     const top = document.documentElement.scrollTop || document.body.scrollTop;
+    let flag = false
     for (let index = 0; index < nav_items.length; index++) {
      const cel = document.getElementById(getQueryString("id", nav_items[index].href))
      if (!cel) {
@@ -56,16 +58,22 @@
      const oft = cel.offsetTop
      const ofh = cel.offsetHeight
      if (nav_items[index + 1]) {
-      const nextoft = document.getElementById(getQueryString("id", nav_items[index + 1].href)).offsetTop
+      const id = getQueryString("id", nav_items[index + 1].href)
+      const nextoft = document.getElementById(id).offsetTop
+
       if (top >= oft - ofh && top < nextoft) {
        setAActive(nav_items[index])
+       flag = true
        break
       }
      } else {
       setAActive(nav_items[index])
      }
     }
-   }, 50)
+    if (!flag) {
+     setAActive(nav_items[0])
+    }
+   }, 5)
 
 
   }
