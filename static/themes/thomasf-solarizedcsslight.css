@@ -16,6 +16,7 @@ canvas,
 video {
   display: inline-block;
 }
+img{max-width: 100%;}
 audio:not([controls]) {
   display: none;
   height: 0;

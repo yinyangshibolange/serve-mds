@@ -10,7 +10,7 @@
 ## 使用方式
 
 1. 安装依赖
-```
+```shell
 npm i
 ```
 
@@ -21,7 +21,7 @@ npm i
 4. 修改userspace/config.js配置app_name和logo
 
 5. 运行
-```
+```shell
 node index
 或者使用pm2进行管理
 ```

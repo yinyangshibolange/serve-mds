@@ -38,3 +38,12 @@ node index
 ## 部署
 1. 由于是ssr，那么服务器一定要有node环境，可以使用宝塔面板安装pm2管理器，也可以在宝塔面板网站管理中添加node项目，windows系统请在项目目录下运行node index命令
 2. linux命令行运行: 执行`bin/www`
+
+
+## markdown链接
+
+<a href="/mds-tech--index" target="_blank">链接到tech/index.md（新标签页）</a>
+
+[链接到haha（当前页面）](/mds-haha)
+
+[webindexdb](/mds-webindexdb)

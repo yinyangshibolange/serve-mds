@@ -2,57 +2,52 @@
 
 const path = require("path")
 const chalk = require("chalk")
-// const yargs = require("yargs")
-const pkg = require('../package.json'); 
+const yargs = require("yargs")
+const pkg = require('../package.json');
 const fs = require("fs")
+const { initUserSpace, startServe } = require("../lib/handle")
 
 
 require('yargonaut')
-.help('3D-ASCII')
-.helpStyle('green')
+  .help('3D-ASCII')
+  .helpStyle('green')
   .style('blue')
- 
-var argv = require('yargs')
-  .command('add', 'Add item to cart')
-  .command('rm', 'Remove item from cart')
-  .option('p', {
-    alias: 'port',
-    describe: 'service listening port',
-    demand: true,
+
+var argv = yargs.command({
+  command: 'init',
+  describe: 'init your user space',
+  builder: {
+    path: {
+      alias: 'p',
+      describe: 'init file paths',
+      demand: false,
+      type: 'string'
+    }
+  },
+  handler (argv) {
+    initUserSpace(argv.path, )
+  }
+})
+  .command({
+    command: 'start',
+    describe: 'start your md service',
+    builder: {
+      config: {
+        alias: 'c',
+        describe: 'your md config file path',
+        default: 'serve-md.config.js',
+        demand: false,
+        type: 'string'
+      }
+    },
+    handler (argv) {
+      startServe(argv.config)
+    }
   })
-  .option('s', {
-    alias: 'staticfold',
-    describe: 'static fold,bind to server',
-  })
-  .option('c', {
-    alias: 'color',
-    describe: 'Desired product color'
-  })
-  .example('$0 add -p 123 -s l -c green', 'Add large, green product with id 123')
+  .example('$0 init -p C://user/Document', 'init at path C://user/Document')
+  .example('$0 init', 'init at current path')
+  .example('$0 start -c md.config.js', 'start md service use md.config.js')
+  .example('$0 start', 'start md service use default config (serve-md.config.js)')
   .wrap(null)
   .argv
 
-
-  console.log(argv.port)
-
-  // console.log(require("serve-md.config.js"))
-
-  const userspace_path = process.cwd()
-
-  console.log(__dirname, __filename)
-  console.log("cwd path: "+ userspace_path)
-  console.log(path.resolve(userspace_path, "serve-md.config.js"))
-  console.log('process.execPath', process.execPath)
-
-  fs.stat(path.resolve(userspace_path, "serve-md.config.js"), (err, stat) => {
-   let config = require("./config")
-   if(!err && stat.isFile()) {
-    config = Object.assign(config, require(path.resolve(userspace_path, "serve-md.config.js")))
-   }
-   require(path.resolve(__dirname, "../lib/index"))(config)
-  })
-
-
-//   process.cwd() 执行命令时所在的目录
-// __dirname 该js文件所在的目录
-// process.execPath 执行此js脚本所用的nodejs程序文件路径

@@ -88,6 +88,7 @@
   addWindowScrollListener()
 
   document.getElementById("fold_img").addEventListener("click", function (ev) {
+   ev.stopPropagation()
    const mainel = document.getElementById("main")
    if (mainel.classList.contains("fold")) {
     mainel.classList.remove("fold")
@@ -96,9 +97,21 @@
    }
   })
 
+  // console.log(document.documentElement.clientWidth)
+  // console.log(document.body.clientWidth)
+  // console.log(document.body.offsetWidth)
   const window_width = document.documentElement.clientWidth || document.body.clientWidth || document.body.offsetWidth || 0
   if (window_width < 500) {
+   const mainel = document.getElementById("main")
    mainel.classList.add("fold")
+   // var meta = document.createElement('meta');
+   // meta.setAttribute('name', 'viewport');
+   // meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+   // document.head.appendChild(meta);
+
+   mainel.addEventListener("click", function (ev) {
+    this.classList.add("fold")
+   })
   }
  }
 })()
