@@ -1,3 +1,0 @@
-# tech/index
-
-## aaska
