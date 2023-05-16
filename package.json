@@ -1,6 +1,6 @@
 {
   "name": "serve-mds",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "bin/serve-mds",
   "bin": {
     "serve-mds": "bin/serve-mds"
@@ -15,9 +15,7 @@
     "marked": "^5.0.1",
     "marked-gfm-heading-id": "^3.0.3",
     "md5": "^2.3.0",
-    "mime": "^3.0.0"
-  },
-  "devDependencies": {
+    "mime": "^3.0.0",
     "yargonaut": "^1.1.4",
     "yargs": "^17.7.2"
   },
@@ -26,5 +24,8 @@
     "lib",
     "static",
     "hi.html"
-  ]
+  ],
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }
