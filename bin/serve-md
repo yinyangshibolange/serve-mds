@@ -35,7 +35,7 @@ var argv = yargs.command({
       config: {
         alias: 'c',
         describe: 'your md config file path',
-        default: 'serve-md.config.js',
+        default: 'serve-mds.config.js',
         demand: false,
         type: 'string'
       }
@@ -47,7 +47,7 @@ var argv = yargs.command({
   .example('$0 init -p C://user/Document', 'init at path C://user/Document')
   .example('$0 init', 'init at current path')
   .example('$0 start -c md.config.js', 'start md service use md.config.js')
-  .example('$0 start', 'start md service use default config (serve-md.config.js)')
+  .example('$0 start', 'start md service use default config (serve-mds.config.js)')
   .wrap(null)
   .argv
 

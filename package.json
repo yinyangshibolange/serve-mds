@@ -1,9 +1,9 @@
 {
-  "name": "serve-md",
+  "name": "serve-mds",
   "version": "1.0.0",
-  "main": "bin/serve-md",
+  "main": "bin/serve-mds",
   "bin": {
-    "serve-md": "bin/serve-md"
+    "serve-mds": "bin/serve-mds"
   },
   "author": "hongyu",
   "license": "MIT",
