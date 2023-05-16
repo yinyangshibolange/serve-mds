@@ -2,31 +2,40 @@
 
 ## 使用node搭建服务器（静态项目无法对文档进行有效的保护）
 
-## 密码在userspace/.passwords文件中
-
-## 首页配置在userspace/config.js文件中，可配置name和logo
-
-## markdown文件是userspace/README.md
 
 
 ## 使用方式
 
-1. 安装依赖
+1. 全局安装
+```shell
+npm i serve-mds -g
 ```
-npm i
+
+2. 创建项目文件夹,任意名称，例如mymd,命令
+```shell
+mkdir mymd
 ```
 
-2. 编写userspace/README.md文档
+3. 进入文件夹
+```shell
+cd mymd
+```
 
-3. 修改文档密码（userspace/.passwords文件）
+4. 初始化项目
+```shell
+serve-mds init
+```
 
-4. 修改userspace/config.js配置app_name和logo
+可带参数p(path),例如
+```shell
+serve-mds init -p C:\\
+```
 
 5. 运行
+```shell
+serve-mds start
 ```
-node index
-或者使用pm2进行管理
-```
+
 
 6. 效果如下图所示
 
@@ -35,9 +44,16 @@ node index
 ![image](static/s2.png)
 
 
+## 查看帮助(init命令和start命令)
+
+1. serve-mds init --help
+
+2. serve-mds start --help
+
 ## 部署
-1. 由于是ssr，那么服务器一定要有node环境，可以使用宝塔面板安装pm2管理器，也可以在宝塔面板网站管理中添加node项目，windows系统请在项目目录下运行node index命令
-2. linux命令行运行: 执行`bin/www`
+
+1. 由于是ssr，那么服务器一定要有node环境
+2. linux命令行运行: 执行`serve-mds start`
 
 
 ## markdown链接
