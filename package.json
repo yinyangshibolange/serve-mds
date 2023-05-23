@@ -1,9 +1,9 @@
 {
-  "name": "serve-mds",
+  "name": "ssr-md",
   "version": "1.0.5",
-  "main": "bin/serve-mds",
+  "main": "bin/ssr-md",
   "bin": {
-    "serve-mds": "bin/serve-mds"
+    "ssr-md": "bin/ssr-md"
   },
   "author": "hongyu",
   "license": "MIT",

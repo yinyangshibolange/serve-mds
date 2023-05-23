@@ -1,10 +1,6 @@
 #!/usr/bin/env node
 
-const path = require("path")
-const chalk = require("chalk")
 const yargs = require("yargs")
-const pkg = require('../package.json');
-const fs = require("fs")
 const { initUserSpace, startServe } = require("../lib/handle")
 
 
@@ -13,7 +9,7 @@ require('yargonaut')
   .helpStyle('green')
   .style('blue')
 
-var argv = yargs.command({
+yargs.command({
   command: 'init',
   describe: 'init your user space',
   builder: {
@@ -32,22 +28,21 @@ var argv = yargs.command({
     command: 'start',
     describe: 'start your md service',
     builder: {
-      config: {
-        alias: 'c',
-        describe: 'your md config file path',
-        default: 'serve-mds.config.js',
+      path: {
+        alias: 'p',
+        describe: 'init file paths',
         demand: false,
         type: 'string'
       }
     },
     handler (argv) {
-      startServe(argv.config)
+      startServe(argv.path)
     }
   })
   .example('$0 init -p C://user/Document', 'init at path C://user/Document')
   .example('$0 init', 'init at current path')
   .example('$0 start -c md.config.js', 'start md service use md.config.js')
-  .example('$0 start', 'start md service use default config (serve-mds.config.js)')
+  .example('$0 start', 'start md service use default config (ssr-md.config.js)')
   .wrap(null)
   .argv
 

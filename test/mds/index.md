@@ -64,9 +64,9 @@ npx ssr-md start
 
 ## 效果如下图所示
 
-![image](static/s1.png)
+![image](s1.png)
 
-![image](static/s2.png)
+![image](s2.png)
 
 ## md文件可以文件嵌套
 

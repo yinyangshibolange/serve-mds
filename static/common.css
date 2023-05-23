@@ -32,6 +32,7 @@ body {
 		height: 2rem;
 		padding-left: 0;
 		bottom: 1rem;
+		left:1rem;
 	}
 }
 
@@ -71,12 +72,19 @@ body {
 	padding-bottom: 3.5rem;
 }
 
+
+
 .menu_tree ul {
 	list-style: none;
 	padding-top: 0;
 	padding-right: 0;
 	padding-bottom: 0;
+	padding-left: 2.5rem;
 	margin: 0;
+}
+
+.menu_tree > ul {
+	padding-left: 0;
 }
 
 .menu_tree li {
@@ -86,24 +94,27 @@ body {
 
 .menu_tree ul a {
 	display: block;
-	padding: 0.3rem 0.3rem 0.3rem 0;
+	padding: 0.3rem 0.5rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	background: none;
 }
 
 .menu_tree ul a.active {
+	border: 1px dashed #f22f27;
 	border-right: 2px solid #f22f27;
 }
 
 .fold_img {
 	position: fixed;
-	bottom: 0;
-	left: 0;
+	bottom: 1.2rem;
+	left: 1.2rem;
 	right: 0;
 	width: 3.5rem;
 	height: 3.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding-left: 1.4rem;
 	cursor: pointer;
 	z-index: 333;
 }
