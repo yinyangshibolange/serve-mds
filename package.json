@@ -1,6 +1,6 @@
 {
   "name": "ssr-md",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "main": "bin/ssr-md",
   "bin": {
     "ssr-md": "bin/ssr-md"
@@ -22,10 +22,15 @@
   "files": [
     "bin",
     "lib",
-    "static",
-    "hi.html"
+    "static"
   ],
   "devDependencies": {
     "jest": "^29.5.0"
-  }
+  },
+  "keywords": [
+    "ssr",
+    "markdown",
+    "doc",
+    "verify"
+  ]
 }
