@@ -1,6 +1,6 @@
 {
   "name": "ssr-md",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "bin/ssr-md",
   "bin": {
     "ssr-md": "bin/ssr-md"
