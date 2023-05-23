@@ -64,9 +64,7 @@ npx ssr-md start
 
 ## 效果如下图所示
 
-![image](static/s1.png)
-
-![image](static/s2.png)
+![image](static/shot.gif)
 
 ## md文件可以文件嵌套
 
@@ -91,7 +89,7 @@ npx ssr-md start
 | need_password     | boolean          | 是否需要密码，才能访问                                  | true       |
 | pass_expire        | string           | 可用天和小时，例如'day','hour','30days','12hours','2days'... 设置cookie过期时间            | 'day'   |
 | markdown_theme      | string          | md主题,文件路径对应static下的css文件                            | 'themes/github-markdown'       |
-| highlight_theme | string           | 代码高亮主题，来自highlight.js主题                   | 'highlight/styles/hybrid.min'   |
+| highlight_theme | string           | 代码高亮主题，来自highlight.js主题                   | 'highlight/styles/vs2015.min'   |
 | static_fold | string           | 你的静态文件资源站,不要将项目根目录作为静态资源站，会很危险哦                   | ''   |
 | custom_css   | string          | md页的自定义css地址(可以是字符串也可以是字符串数组),如果要使用自定义css，则需要设置static_fold（静态资源文件夹），并将css文件放到static_fold对应的文件夹下                        | ''       |
 | custom_hi_css        | string         | 登录页的自定义css地址(可以是字符串也可以是字符串数组),如果要使用自定义css，则需要设置static_fold（静态资源文件夹），并将css文件放到static_fold对应的文件夹下 | ''   |

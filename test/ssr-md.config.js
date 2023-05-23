@@ -10,7 +10,7 @@ module.exports = {
  need_password: true, // 是否需要密码，才能访问
  pass_expire: 'day', // 'day','hour','30days','12hours', 设置cookie过期时间
  markdown_theme: 'themes/github-markdown', // md主题,文件路径对应static下的css文件
- highlight_theme: 'highlight/styles/hybrid.min', // 代码高亮主题，来自highlight.js主题
+ highlight_theme: 'highlight/styles/vs2015.min', // 代码高亮主题，来自highlight.js主题
  static_fold: '', // 你的静态文件资源站,不要将项目根目录作为静态资源站，会很危险哦
  custom_css: "", // md页的自定义css地址(可以是字符串也可以是字符串数组),如果要使用自定义css，则需要设置static_fold（静态资源文件夹），并将css文件放到static_fold对应的文件夹下
  custom_hi_css: "", // 登录页的自定义css地址(可以是字符串也可以是字符串数组),如果要使用自定义css，则需要设置static_fold（静态资源文件夹），并将css文件放到static_fold对应的文件夹下
