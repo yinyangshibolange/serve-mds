@@ -4,6 +4,7 @@ module.exports = {
  max_levels: 3, // 最大标题层数，设置为null则不限制层数，层数限制从h1开始，既如果只有h2，h3，h4且设置了三层，那么只有h2和h3会被设置为标题
  app_name: "我的文档", // 登录页名称
  logo_src: "", // 登录页logo
+ favicon: "favicon.ico", // 网站图标
  mds_dir: "mds", // md目录，默认mds
  index_md: "index", // 首页md,默认index, 默认index
  need_password: true, // 是否需要密码，才能访问

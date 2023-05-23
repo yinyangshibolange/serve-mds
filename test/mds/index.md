@@ -84,6 +84,7 @@ npx ssr-md start
 | app_screct     | string           | cookie生成所用安全码                        | '_app_sercrect1_'          |
 | app_name         | string           | 登录页名称                                   | '我的文档'          |
 | logo_src   | string          | 登录页logo                         | ""       |
+| favicon   | string          | 网站图标 href                        | "favicon.ico"       |
 | max_levels   | number          | 最大标题层数，设置为null则不限制层数，层数限制从h1开始，既如果只有h2，h3，h4且设置了三层，那么只有h2和h3会被设置为标题                         | 3       |
 | mds_dir      | string | md目录，默认mds                                 | 'mds'     |
 | index_md     | string            | 首页md,默认index                                   | 'index'   |
