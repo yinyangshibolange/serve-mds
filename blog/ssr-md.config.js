@@ -7,7 +7,7 @@ module.exports = {
  favicon: "favicon.ico", // 网站图标
  mds_dir: "mds", // md目录，默认mds
  index_md: "index", // 首页md,默认index, 默认index
- need_password: false, // 是否需要密码，才能访问
+ need_password: true, // 是否需要密码，才能访问
  pass_expire: 'day', // 'day','hour','30days','12hours', 设置cookie过期时间
  markdown_theme: 'themes/github-markdown', // md主题,文件路径对应static下的css文件
  highlight_theme: 'highlight/styles/vs2015.min', // 代码高亮主题，来自highlight.js主题
@@ -19,22 +19,32 @@ module.exports = {
  // todo
  admin_password: '', // 管理员密码，可以进行密码管理，通过修改.passwords文件,必须有管理员cookie
  // 密码管理todo，暂未实现
-
+ 
+ password_index: "auth", // 登录页面index
  htmls: [{
+  title: "密码认证",
+  meta: "",
+  index: ["/auth", "/auth.html"],
+  path: "htmls/auth.html",
+ },{
   title: "首页",
   meta: "",
-  path: "index.html"
+  index: ["/", "/index.html"],
+  path: "htmls/index.html"
  }, {
   title: "标签页",
   meta: "",
-  path: "tags.html"
+  index: ["/tags", "/tags.html"],
+  path: "htmls/tags.html"
  }, {
   title: "归档",
   meta: "",
-  path: "timeline.html"
+  index: ["/timeline", "/timeline.html"],
+  path: "htmls/timeline.html"
  }, {
   title: "关于",
   meta: "",
-  path: "about.html"
+  index: ["/about", "/about.html"],
+  path: "htmls/about.html"
  }]
 }
