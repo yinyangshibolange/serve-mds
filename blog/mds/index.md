@@ -3,8 +3,8 @@ title: 每天学习一个API之Beacon
 author: 程序员的快乐生活
 desp: 挑选了一些具有较强兼容性的WEB API进行说明。Beacon 用于发送异步和非阻塞请求到服务器
 time: 2023-3-20 17:06:00
-type: MDN API 
 tag: 前端API
+recommend: true
 banner: http://rqisd4yi1.hd-bkt.clouddn.com/brodchannel.drawio.png
 ---
 
