@@ -38,6 +38,7 @@ module.exports = [{
  path: "htmls/timeline.html",
  showHeader: true,
  showFooter: true,
+ content: "timeline"
 }, {
  nav: true,
  title: "关于",
