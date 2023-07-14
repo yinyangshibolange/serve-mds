@@ -1,4 +1,4 @@
-html {
+/* html {
 	font-size: 16px;
 }
 
@@ -15,8 +15,6 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-
-	/* CSS rules */
 	#main {
 		width: 100%;
 		margin-left: 20rem;
@@ -37,8 +35,6 @@ body {
 }
 
 @media screen and (min-width: 500px) {
-
-	/* CSS rules */
 	#main {
 		padding-left: 20rem;
 	}
@@ -129,7 +125,6 @@ body {
 }
 
 #markdown_container {
-	/* padding: 2.1rem 3.5rem 2.1rem 6.3rem; */
 	padding: 2% 5%;
 }
 
@@ -182,7 +177,6 @@ body {
 }
 
 .hi-container .auth_form .form_item_pass input:focus {
-	/* border: 1px solid #f22f27cc; */
 	border: 2px solid transparent;
 	outline: 2px solid #f22f27;
 }
@@ -200,4 +194,4 @@ body {
 
 .hi-container .auth_form>button:hover {
 	opacity: 0.7;
-}
+} */
