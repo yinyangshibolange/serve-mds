@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+ <head></head>
+ <body>
+  index.html
+我这是首页
+<ul>
+  <% mds.forEach(function(item){ %>
+    <%- `<li>${item.title}</li>`  %>
+  <% }); %>
+</ul>
+ </body>
+</html>
