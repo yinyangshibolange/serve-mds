@@ -16,12 +16,17 @@ module.exports = {
  admin_password: '', // 管理员密码，可以进行密码管理，通过修改.passwords文件,必须有管理员cookie
  // 密码管理todo，暂未实现
 
+ base_csss: ['css/pure.min.css','css/common.css', 'css/vars.css'],
+ base_jss: ['js/jquery.min.js'],
  // 管理员可以对文件进行编辑，也可以编辑网站样式
+ logo: 'images/logo.png',
+ title: '坤文',
  tdk: {
   title: "",
   desp: "",
   keywords: ""
  },
  password_index: "auth", // 登录页面index
+ layout: 'layout/layout.ejs',
  htmls: require("./router"),
 }

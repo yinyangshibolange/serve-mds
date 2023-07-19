@@ -1,0 +1,30 @@
+header {
+box-shadow: 0 0 5px #e2e2e2;
+}
+.header-container {
+ max-width: var(--content-width);
+ display: flex;
+align-items: center;
+margin: 0 auto;
+}
+
+header .header-title {
+ font-size: 35px;
+ font-weight: bold;
+ background: url("/images/kun.jpg");
+ width: fit-content;
+ background-size: cover;
+ -webkit-background-clip: text;  /* Chrome 用户注意加 -webkit 前缀 */
+ background-clip: text;
+ color: transparent;
+ font-family: AaDongYuanSong-2;
+ float: left;
+}
+
+.header-container > nav > a {
+ color: #dfdff4;
+ text-decoration: none;
+ font-size: 17px;
+ display: inline-block;
+ padding: 12px 20px;
+}
