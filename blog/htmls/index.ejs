@@ -4,10 +4,15 @@
  <body>
   index.html
 我这是首页
-<ul>
-  <% mds.forEach(function(item){ %>
-    <%- `<li>${item.title}</li>`  %>
-  <% }); %>
-</ul>
+
+
+  <ul id="mainList">
+   <% mds.forEach(function(item){ %>
+   <%- `<li>${item.title}</li>`  %>
+   <% }); %>
+  </ul>
+
+  <div class="list-title">推荐</div>
+  <ul id="recommandList"></ul>
  </body>
 </html>

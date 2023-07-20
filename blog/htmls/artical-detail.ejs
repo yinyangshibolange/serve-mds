@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <link rel="stylesheet" type="text/css" href="css/artical-detail.css">
-  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/modules/artical-detail.css">
+  <%- extraHeads %>
  </head>
  <body>
-  artical-detail.html
-
+  <%- markdownHtml %>
+<section id="contentRightFix">
+ <%- mdTypeModuleHtml %>
+ <%- mdTagModuleHtml %>
+ <%- mdMenuModuleHtml %>
+ <script >
+  $(document).ready(function() {
+   const menuRect = $("#menuModule")[0].getBoundingClientRect()
+   const MenuTop = menuRect.top
+   const MenuLeft = menuRect.left
+   $(window).scroll(function() {
+    let scroll = $(window).scrollTop();
+    let headerHeight = $("header").height()
+    let $menuModule = $("#menuModule")
+    console.log(scroll - headerHeight, MenuTop, )
+    if(scroll  > MenuTop) {
+     $menuModule.addClass("menu-fixed")
+     $menuModule.css("left", MenuLeft + 'px')
+    } else {
+     $menuModule.removeClass("menu-fixed")
+     $menuModule.css("left", "0")
+    }
+   });
+  });
+ </script>
+</section>
  </body>
 </html>

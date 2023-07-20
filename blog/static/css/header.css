@@ -1,17 +1,54 @@
 header {
 box-shadow: 0 0 5px #e2e2e2;
+ background: #fff;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+}
+.header-slot {
+ height: var(--header-height);
 }
 .header-container {
- max-width: var(--content-width);
+ /*max-width: var(--content-width);*/
  display: flex;
 align-items: center;
 margin: 0 auto;
+ height: var(--header-height);
+ padding: 0 2em;
+}
+
+@keyframes tieSanKao {
+ 0% {
+  background-position: -10px 0;
+ }
+ 25%{
+  background-position: 10px 17px;
+ }
+ 50% {
+  background-position: -10px 0;
+ }
+ 75%{
+  background-position: 10px -17px;
+ }
+ 100%{
+  background-position: -10px 0;
+ }
+}
+
+@keyframes fadeIn {
+ from {
+  opacity: 0;
+ }
+ to {
+  opacity: 1;
+ }
 }
 
 header .header-title {
  font-size: 35px;
  font-weight: bold;
- background: url("/images/kun.jpg");
+ background: url("/images/tiesankao.jpg");
  width: fit-content;
  background-size: cover;
  -webkit-background-clip: text;  /* Chrome 用户注意加 -webkit 前缀 */
@@ -19,6 +56,7 @@ header .header-title {
  color: transparent;
  font-family: AaDongYuanSong-2;
  float: left;
+ animation: tieSanKao 1s ease-in-out infinite normal;
 }
 
 .header-container > nav > a {
@@ -27,4 +65,126 @@ header .header-title {
  font-size: 17px;
  display: inline-block;
  padding: 12px 20px;
+}
+
+#navContainer {
+position: relative;
+ box-sizing: border-box;
+}
+
+#navContainer.fold-active {
+
+}
+#navContainer #navListMask {
+ display: none;
+ position: fixed;
+ top: 0;
+ right: 0;
+ left: 0;
+ bottom: 0;
+ background: rgba(0,0,0,0.3);
+ z-index: 95;
+}
+
+#navContainer.fold-active #navListMask {
+ display: block;
+ animation: fadeIn .28s ease;
+}
+
+
+
+#navContainer  #navList {
+ position: fixed;
+ width: 20em;
+ right: -20em;
+ top: 0;
+ bottom: 0;
+ background: #fff;
+ /*box-shadow: 0 0 5px #f2f2f2;*/
+ box-shadow: 0 0 5px rgba(0,0,0,0.15);
+ z-index: 96;
+ transition: right .28s ease;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ height: 100%;
+}
+
+#navContainer.fold-active #navList {
+ right: 0;
+}
+
+
+
+#navContainer  #navList > li {
+ padding: 0;
+ margin: 0;
+ height: fit-content;
+}
+
+#navContainer  #navList > li> a {
+ text-decoration: none;
+ display: block;
+ text-align: center;
+ transition: background .28s ease;
+ color: #666;
+ box-sizing: border-box;
+ height: fit-content;
+ padding: 0.7em 0;
+}
+
+#navContainer  #navList > li.menu-item-active > a {
+ background: #f5f5f5;
+ color: #333;
+ font-weight: bold;
+}
+
+#navContainer  #navList > li> a:hover {
+ background: #f2f2f2;
+ color: #111;
+}
+
+#navContainer  #navFold {
+ display: block;
+ position: absolute;
+ right: 0;
+}
+
+@media screen and (min-width: 48em) {
+
+ #navContainer {
+
+ }
+
+
+ #navContainer #navListMask {
+  display: none;
+ }
+
+ #navContainer  #navList {
+position: absolute;
+  background: none;
+  width: fit-content;
+  box-shadow: none;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  transform: translateX(-50%);
+ }
+
+ #navContainer  #navFold {
+  display: none;
+ }
+
+ #navContainer  #navList > li {
+  float: left;
+  height: 100%;
+ }
+
+ #navContainer  #navList > li > a {
+  padding: 0 1.8em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+ }
 }

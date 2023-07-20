@@ -87,15 +87,7 @@
 
   addWindowScrollListener()
 
-  document.getElementById("fold_img").addEventListener("click", function (ev) {
-   ev.stopPropagation()
-   const mainel = document.getElementById("main")
-   if (mainel.classList.contains("fold")) {
-    mainel.classList.remove("fold")
-   } else {
-    mainel.classList.add("fold")
-   }
-  })
+
 
   const window_width = document.documentElement.clientWidth || document.body.clientWidth || document.body.offsetWidth || 0
   if (window_width < 500) {
