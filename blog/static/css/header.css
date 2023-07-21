@@ -5,6 +5,7 @@ box-shadow: 0 0 5px #e2e2e2;
  top: 0;
  left: 0;
  right: 0;
+ z-index: 79;
 }
 .header-slot {
  height: var(--header-height);

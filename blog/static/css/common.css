@@ -22,12 +22,31 @@ src: url("/css/AaDongYuanSong/AaDongYuanSong-2.ttf");
  box-sizing: border-box;
  width: calc(100% - 3.8em);
  /*position: relative;*/
+ min-height: calc(100% - 3em);
 }
 
 .module {
  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
  border-radius: 0.5em;
- padding: 1.7em;
+ /*padding: 1em 0;*/
  background: #fff;
  box-sizing: border-box;
+ overflow: hidden;
+}
+.module .module-title {
+ font-size: 1.3em;
+ font-weight: bold;
+ padding: 1em  1em  1em  2em;
+ border-bottom: 0.1em solid #f2f2f2;
+ /*margin-bottom: 0.7em;*/
+ position: relative;
+}
+.module .module-title::before {
+ content: '';
+width: 0.3em;
+ height: 100%;
+ position: absolute;
+ background: #0a3069;
+ left: 0;
+ top:0;
 }

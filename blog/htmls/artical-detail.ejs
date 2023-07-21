@@ -7,24 +7,37 @@
  <body>
   <%- markdownHtml %>
 <section id="contentRightFix">
- <%- mdTypeModuleHtml %>
- <%- mdTagModuleHtml %>
- <%- mdMenuModuleHtml %>
+ <section id="typeModule" class="type-module module">
+  <div class="module-title">分类</div>
+ <%- type_module_html %>
+ </section>
+ <section id="tagModule" class="tag-module module">
+  <div class="module-title">标签</div>
+ <%- tags_module_html %>
+ </section>
+ <section id="menuModule" class="module">
+  <div class="module-title">目录</div>
+  <%- mdMenuModuleHtml %>
+ </section>
  <script >
   $(document).ready(function() {
-   const menuRect = $("#menuModule")[0].getBoundingClientRect()
-   const MenuTop = menuRect.top
-   const MenuLeft = menuRect.left
+   let $menuRect ,headerHeight,MenuTop,MenuLeft
+   function getInitInfos() {
+    if(!$menuRect) $menuRect = $("#tagModule")
+    if(!headerHeight) headerHeight = $("header").height()
+    if(!MenuTop) MenuTop = $menuRect.offset().top
+    if(!MenuLeft) MenuLeft = $menuRect.offset().left
+   }
+   getInitInfos()
    $(window).scroll(function() {
+    getInitInfos()
     let scroll = $(window).scrollTop();
-    let headerHeight = $("header").height()
     let $menuModule = $("#menuModule")
-    console.log(scroll - headerHeight, MenuTop, )
-    if(scroll  > MenuTop) {
-     $menuModule.addClass("menu-fixed")
+    if(scroll - headerHeight > MenuTop) {
+     if(!$menuModule.hasClass("menu-fixed")) $menuModule.addClass("menu-fixed")
      $menuModule.css("left", MenuLeft + 'px')
     } else {
-     $menuModule.removeClass("menu-fixed")
+     if($menuModule.hasClass("menu-fixed")) $menuModule.removeClass("menu-fixed")
      $menuModule.css("left", "0")
     }
    });

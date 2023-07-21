@@ -3,6 +3,12 @@
  <head></head>
  <body>
   tag-index.html
-
+  <ul id="mainList">
+   <% if(tag_mds) { %>
+   <% tag_mds.forEach(function(item){ %>
+    <%- `<li>${item.title}</li>`  %>
+   <% }) %>
+   <% } %>
+  </ul>
  </body>
 </html>

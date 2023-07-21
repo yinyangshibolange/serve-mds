@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+    <link rel="stylesheet" href="css/modules/timeline.css">
+</head>
 <body>
 
+<div class=" module">
+    <ul>
+        <% timeline.forEach(item => {%>
+        <%- `<li class="timeline-time">${item.time}</li>` + '<ul>' + item.mds.map(item1 => `<li><a href="${item1.index}">${item1.title}</a></li>`) + '</ul>' %>
+        <% }) %>
+    </ul>
+</div>
 </body>
 </html>

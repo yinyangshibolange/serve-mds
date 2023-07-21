@@ -3,6 +3,12 @@
  <head></head>
  <body>
   typeindex.html
-
+  <ul id="mainList">
+   <% if(type_mds) { %>
+   <%   type_mds.forEach(function(item){ %>
+    <%- `<li>${item.title}</li>`  %>
+   <% }) %>
+   <% } %>
+  </ul>
  </body>
 </html>

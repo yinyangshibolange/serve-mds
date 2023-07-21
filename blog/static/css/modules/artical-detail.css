@@ -1,5 +1,5 @@
 #container {
- padding-bottom: 5em !important;
+ /*padding-bottom: 5em !important;*/
 display: flex;
 }
 
@@ -9,6 +9,7 @@ display: flex;
 
 #main {
 width: calc(100% - 23em);
+ padding: 0 1em;
 }
 
 #contentRightFix{
@@ -16,7 +17,16 @@ width: calc(100% - 23em);
  margin-left: 2em;
 }
 
+#menuModule {
+ height: calc(100vh - 5.3em);
+ display: flex;
+ flex-direction: column;
+}
+
 #menu_tree {
+ overflow-y: auto;
+ flex: 1;
+ padding: 1em;
 }
 
 #menu_tree ul {
@@ -71,7 +81,6 @@ width: calc(100% - 23em);
 
 #menuModule {
  margin-top: 0.7em;
-
 }
 
 #menuModule.menu-fixed {

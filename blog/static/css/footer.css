@@ -1,4 +1,6 @@
 footer .container-footer {
     /*max-width: var(--content-width);*/
     margin: 0 auto;
+    padding: 2em 1.3em;
+    background: #fff;
 }
