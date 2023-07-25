@@ -1,15 +1,15 @@
 ---
 title: 每天学习一个API之Beacon
 author: 程序员的快乐生活
-despircation: 挑选了一些具有较强兼容性的WEB API进行说明。Beacon 用于发送异步和非阻塞请求到服务器
+desp: 挑选了一些具有较强兼容性的WEB API进行说明。Beacon 用于发送异步和非阻塞请求到服务器
 time: 2023-3-20 17:06:00
-type: MDN API 
 tag: 前端API
 banner: http://rqisd4yi1.hd-bkt.clouddn.com/brodchannel.drawio.png
 ---
 
 # Beacon
-这个api可以让在页面关闭时，发送一个请求到服务器，由于传统的xhr请求不可靠，不能保证发送成功，所以诞生了这个api
+这个api可以让在页面关闭时，发送一个请求到服务器，由于传统的xhr请求不可靠，不能保证发送成功，所以诞生了这个api，这在某些特殊场景下将会比较实用
+
 食用方法如下：
 ```javascript
 navigator.sendBeacon(url);

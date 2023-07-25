@@ -1,9 +1,8 @@
 ---
 title: 《每天学习一个API之getBoundingClientRect》
 author: 程序员的快乐生活
-despircation: 本节目由流浪的坤少赞助
+desp: 本节目由流浪的坤少赞助
 time: 2023-2-15 15:56:00
-type: MDN API 
 tag: 前端API
 banner: /assets/images/mdn_logo.png
 ---

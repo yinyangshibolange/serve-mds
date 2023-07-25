@@ -1,9 +1,8 @@
 ---
 title: billfish
 author: hy
-despircation: billfish是一个图片管理软件，他的好处是可以把我们项目中的素材统一到软件中进行管理，方便我们进行操作，官网地址：https://www.billfish.cn/
+desp: billfish是一个图片管理软件，他的好处是可以把我们项目中的素材统一到软件中进行管理，方便我们进行操作，官网地址：https://www.billfish.cn/
 time: 2022-12-7 15:20:00
-type: software
 tag: billfish
 banner: http://rqisd4yi1.hd-bkt.clouddn.com/Snipaste_2023-03-22_09-48-56.png
 ---

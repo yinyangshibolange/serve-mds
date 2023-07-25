@@ -1,9 +1,8 @@
 ---
 title: PowerToys
 author: hy
-despircation: 这个是微软的官方软件地址，具有许多windows使用小工具
+desp: 这个是微软的官方软件地址，具有许多windows使用小工具
 time: 2022-12-7 15:20:00
-type: software
 tag: PowerToys
 banner: http://rqisd4yi1.hd-bkt.clouddn.com/Snipaste_2023-03-22_09-48-56.png
 ---

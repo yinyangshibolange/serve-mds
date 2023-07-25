@@ -1,9 +1,8 @@
 ---
 title: 每天学习一个API之BroadcastChannel
 author: 程序员的快乐生活
-despircation: 挑选了一些具有较强兼容性的WEB API进行说明。广播对象BroadcastChannel是一个浏览器内置对象，可以实现在同源浏览器下不同tab，窗口，frame，iframe之前进行简单通讯
+desp: 挑选了一些具有较强兼容性的WEB API进行说明。广播对象BroadcastChannel是一个浏览器内置对象，可以实现在同源浏览器下不同tab，窗口，frame，iframe之前进行简单通讯
 time: 2023-3-20 15:56:00
-type: MDN API 
 tag: 前端API
 banner: http://rqisd4yi1.hd-bkt.clouddn.com/brodchannel.drawio.png
 ---

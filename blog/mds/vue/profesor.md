@@ -1,9 +1,8 @@
 ---
 title: 高级前端面试题
 author: hy
-despircation: 高级前端面试题
+desp: 高级前端面试题
 time: 2023-3-22 15:20:00
-type: 前端面试题
 tag: 前端面试题
 banner: https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d2dfce242d65465a80a01c7eb56d294e~tplv-k3u1fbpfcp-watermark.image?" alt="20210204411652_oerTjp.jpg
 recommend: 1
