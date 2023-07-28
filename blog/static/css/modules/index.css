@@ -1,0 +1,7 @@
+#mainList::after {
+  clear: both;
+}
+
+#indexMudule {
+  padding: 0 2em;
+}

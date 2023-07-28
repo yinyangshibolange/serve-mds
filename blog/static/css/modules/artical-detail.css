@@ -1,91 +1,83 @@
 #container {
- /*padding-bottom: 5em !important;*/
-display: flex;
+  display: flex;
 }
 
 #markdown_container {
- width: 100%;
+  width: 100%;
+  min-height: 200vh;
 }
 
 #main {
-width: calc(100% - 23em);
- padding: 0 1em;
+  width: calc(100% - 23em);
+  padding: 0 1em;
 }
 
-#contentRightFix{
- width: 21em;
- margin-left: 2em;
+#contentRightFix {
+  width: 21em;
+  margin-left: 2em;
 }
 
 #menuModule {
- height: calc(100vh - 5.3em);
- display: flex;
- flex-direction: column;
+  height: calc(100vh - 5.3em);
+  display: flex;
+  flex-direction: column;
 }
 
 #menu_tree {
- overflow-y: auto;
- flex: 1;
- padding: 1em;
+  overflow-y: auto;
+  flex: 1;
+  padding: 1em;
 }
-
 #menu_tree ul {
- list-style: none;
+  list-style: none;
 }
-
-#menu_tree ul li a{
- display: block;
- line-height: 1.5em;
- text-decoration: none;
- color: #666;
- position: relative;
- padding: 0 0.5em;
- white-space: nowrap;
- overflow: hidden;
- text-overflow: ellipsis;
+#menu_tree ul li a {
+  display: block;
+  line-height: 1.5em;
+  text-decoration: none;
+  color: #666;
+  position: relative;
+  padding: 0 0.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-
 #menu_tree ul li a:hover {
- color: var(--primary-color);
+  color: var(--primary-color);
 }
-
-#menu_tree ul li a.active {
-
-}
-
 #menu_tree ul li a.active::before {
- content: '';
- display: block;
- position: absolute;
- top:0.25em;
- left: 0;
- bottom: 0.25em;
- width: 3px;
- background: var(--primary-color);
-
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  bottom: 0.25em;
+  width: 3px;
+  background: var(--primary-color);
 }
-
 #menu_tree > ul {
- padding: 0;
- margin: 0;
-
-}
-
-#typeModule {
+  padding: 0;
+  margin: 0;
 }
 
 #tagModule {
- margin-top: 0.7em;
+  margin-top: 0.7em;
 }
 
 #menuModule {
- margin-top: 0.7em;
+  margin-top: 0.7em;
+}
+#menuModule.menu-fixed {
+  position: fixed;
+  top: var(--header-height);
+  width: 21em;
+  left: calc(100% - 23em);
 }
 
-#menuModule.menu-fixed {
- position: fixed;
- top: var(--header-height);
- width: 21em;
- left: calc(100% - 23em);
+footer {
+  width: calc((100% - 23em) - 3.8em);
+  margin: 0 1.9em;
+  border-radius: 1em 1em 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }

@@ -1,5 +1,8 @@
 :root {
- --content-width: 1200px;
- --primary-color: #ca1dac;
- --header-height: 3.5em;
+  --content-width: 1200px;
+  --primary-color: #ca1dac;
+  --header-height: 3.5em;
+  --text-main: #333;
+  --text-666: #666;
+  --text-999: #999;
 }

@@ -1,0 +1,183 @@
+@import "./mixin.scss";
+
+header {
+  // @include size(160px, 160px);
+  box-shadow: 0 0 5px #e2e2e2;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 79;
+}
+
+.header-slot {
+  height: var(--header-height);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  height: var(--header-height);
+  padding: 0 2em;
+}
+
+@keyframes tieSanKao {
+  0% {
+    background-position: -10px 0;
+  }
+
+  25% {
+    background-position: 10px 17px;
+  }
+
+  50% {
+    background-position: -10px 0;
+  }
+
+  75% {
+    background-position: 10px -17px;
+  }
+
+  100% {
+    background-position: -10px 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+header .header-title {
+  font-size: 35px;
+  font-weight: bold;
+  background: url("/images/tiesankao.jpg");
+  width: fit-content;
+  background-size: cover;
+  -webkit-background-clip: text;
+  /* Chrome 用户注意加 -webkit 前缀 */
+  background-clip: text;
+  color: transparent;
+  font-family: AaDongYuanSong-2;
+  float: left;
+  animation: tieSanKao 1s ease-in-out infinite normal;
+}
+
+.header-container>nav>a {
+  color: #dfdff4;
+  text-decoration: none;
+  font-size: 17px;
+  display: inline-block;
+  padding: 12px 20px;
+}
+
+#navContainer {
+  position: relative;
+  box-sizing: border-box;
+
+  &.fold-active {
+    #navListMask {
+      display: block;
+      animation: fadeIn .28s ease;
+    }
+
+    #navList {
+      right: 0;
+    }
+  }
+
+  #navListMask {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 95;
+
+    @include media(">tablet") {
+      display: none;
+    }
+  }
+  #navFold {
+    display: block;
+    position: absolute;
+    right: 0;
+  
+    @include media(">tablet") {
+      display: none;
+    }
+  }
+  #navList {
+    position: fixed;
+    width: 20em;
+    right: -20em;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    /*box-shadow: 0 0 5px #f2f2f2;*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    z-index: 96;
+    transition: right .28s ease;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    @include media(">tablet") {
+      position: absolute;
+      background: none;
+      width: fit-content;
+      box-shadow: none;
+      left: 50%;
+      top: 0;
+      height: 100%;
+      transform: translateX(-50%);
+    }
+
+    &>li {
+      padding: 0;
+      margin: 0;
+      height: fit-content;
+      @include media(">tablet") {
+        float: left;
+        height: 100%;
+      }
+      &.menu-item-active>a {
+        background: #f5f5f5;
+        color: #333;
+        font-weight: bold;
+      }
+      &>a {
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        transition: background .28s ease;
+        color: #666;
+        box-sizing: border-box;
+        height: fit-content;
+        padding: 0.7em 0;
+        @include media(">tablet") {
+          padding: 0 1.8em;
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+        &:hover {
+          background: #f2f2f2;
+          color: #111;
+        }
+      }
+    }
+  }
+
+}
+

@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
- <head></head>
+ <head>
+  <link rel="stylesheet" href="css/modules/index.css">
+ </head>
  <body>
-  index.html
-我这是首页
-
-
-  <ul id="mainList">
-   <% mds.forEach(function(item){ %>
-   <%- `<li>${item.title}</li>`  %>
-   <% }); %>
-  </ul>
-
-  <div class="list-title">推荐</div>
-  <ul id="recommandList"></ul>
+ <section id="indexMudule" class="module">
+  <ul id="mainList" class="root">
+    <% mds.forEach(function(item){ %>
+    <%- `<li class="md-card">
+ <a href="${item.index}">
+   <div class="md-card-banner">
+ <img src="${item.banner}" alt="">
+ </div>
+ <div class="md-card-right">
+ <div class="md-card-title">${item.title}</div>
+ <div class="md-card-other"><div class="author">${item.author}</div><div class="time">${item.time}</div></div>
+ </div>
+   </a>
+ </li>`
+    %>
+    <% }); %>
+   </ul>
+ 
+   <div class="list-title">推荐</div>
+   <ul id="recommandList"></ul>
+ </section>
  </body>
 </html>

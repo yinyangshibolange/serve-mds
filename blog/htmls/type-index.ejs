@@ -2,13 +2,14 @@
 <html>
  <head></head>
  <body>
-  typeindex.html
-  <ul id="mainList">
-   <% if(type_mds) { %>
-   <%   type_mds.forEach(function(item){ %>
-    <%- `<li>${item.title}</li>`  %>
-   <% }) %>
-   <% } %>
-  </ul>
+<section class="module">
+ <ul id="mainList">
+  <% if(type_mds) { %>
+  <%   type_mds.forEach(function(item){ %>
+   <%- `<li>${item.title}</li>`  %>
+  <% }) %>
+  <% } %>
+ </ul>
+</section>
  </body>
 </html>
