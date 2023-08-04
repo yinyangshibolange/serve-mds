@@ -1,0 +1,126 @@
+@import "./mixin.scss";
+
+html,
+body {
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ height: 100%;
+}
+
+@font-face {
+ font-family: "AaDongYuanSong-2";
+ src: url("/css/AaDongYuanSong/AaDongYuanSong-2.ttf");
+}
+
+#app {
+ min-height: 101%;
+ background: #f2f3f5;
+ width: 100%;
+}
+
+#container {
+ margin: 1em 1.9em;
+ box-sizing: border-box;
+ width: calc(100% - 3.8em);
+ min-height: calc(100% - 3em);
+}
+
+.module {
+ box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+ border-radius: 0.5em;
+ background: #fff;
+ box-sizing: border-box;
+ overflow: hidden;
+ .module-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 1em 1em 1em 2em;
+  border-bottom: 0.1em solid #f2f2f2;
+  position: relative;
+ }
+ .module-title::before {
+  content: '';
+  width: 0.3em;
+  height: 100%;
+  position: absolute;
+  background: #0a3069;
+  left: 0;
+  top: 0;
+ }
+}
+
+ul {
+ list-style: none;
+ &.root {
+  padding: 0;
+ }
+}
+
+.md-card {
+ float: left;
+ background: #fff;
+ border-radius: 1em;
+ padding: 2em;
+ width: 100%;
+ box-sizing: border-box;
+ margin-top: 2em;
+ height: 10em;
+ box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+  & > a {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   text-decoration: none;
+   color: #333;
+  }
+
+ @include media(">tablet") {
+  width: calc(50% - 1em);
+ }
+
+ &:nth-child(2n) {
+  @include media(">tablet") {
+   margin-left: 2em;
+  }
+ }
+
+ .md-card-banner {
+  width: 30%;
+
+  &>img {
+   width: 100%;
+   height: auto;
+  }
+ }
+ .md-card-right {
+  width: 70%;
+  position: relative;
+ }
+
+ .md-card-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+ }
+
+ .md-card-other {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .author {
+   color: #999;
+  }
+  .time {
+   color: #999;
+  }
+ }
+}
