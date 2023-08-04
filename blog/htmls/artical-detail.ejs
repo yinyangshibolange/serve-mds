@@ -13,7 +13,11 @@
  </section>
  <section id="tagModule" class="tag-module module">
   <div class="module-title">标签</div>
- <%- tags_module_html %>
+  <ul>
+   <% tags.forEach(function(item) { %>
+   <%- `<li><a class="hover-line" href="/tag-index?tag=${item}">${item}</a></li>` %>
+   <% }) %>
+  </ul>
  </section>
  <section id="menuModule" class="module">
   <div class="module-title">目录</div>

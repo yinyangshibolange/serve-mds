@@ -23,7 +23,7 @@ module.exports = {
   target: 'static/css'
  }],
 
- base_csss: ['css/pure.min.css','css/common.css', 'css/vars.css'],
+ base_csss: ['css/pure.min.css','css/common.css'],
  base_jss: ['js/jquery.min.js'],
  // 管理员可以对文件进行编辑，也可以编辑网站样式
  logo: 'images/logo.png',

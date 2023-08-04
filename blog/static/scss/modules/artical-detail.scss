@@ -1,3 +1,5 @@
+@import "../mixin.scss";
+
 $right-width: 21em;
 $right-margin-left: 2em;
 $main-width: calc(100% - #{$right-width + $right-margin-left});
@@ -12,13 +14,20 @@ $main-width: calc(100% - #{$right-width + $right-margin-left});
 }
 
 #main {
- width: $main-width;
+ width: 100%;
  padding: 0 1em;
+ @include media(">tablet") {
+  width: $main-width;
+}
 }
 
 #contentRightFix {
+ display: none;
  width: $right-width;
  margin-left: $right-margin-left;
+ @include media(">tablet") {
+  display: block;
+}
 }
 
 #menuModule {
@@ -75,10 +84,66 @@ $main-width: calc(100% - #{$right-width + $right-margin-left});
 
 
 
-#typeModule {}
+#typeModule {
+ .type-tree {
+  padding: 1em;
+  & > ul {
+   padding: 0;
+   margin: 0;
+   li {
+    padding: 0.15em 0;
+    & > ul {
+     position: relative;
+     &::before {
+      content: '';
+      display: block;
+      height: 50%;
+      width: 20px;
+      border-left: 2px solid #333;
+      border-bottom: 2px solid #333;
+      border-bottom-left-radius: 0.25em;
+      position: absolute;
+      left: 15px;
+      top: 2px;
+     }
+    }
+
+   }
+  }
+ }
+}
 
 #tagModule {
  margin-top: 0.7em;
+ & > ul {
+  overflow: hidden;
+  padding: 1.1em;
+  margin:0;
+  & > li {
+   display: inline-block;
+   max-width: 7em;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   position: relative;
+   & > a {
+    display: inline-block;
+
+   }
+   &:not(:first-child) {
+    padding-left: 0.5em;
+    &::before {
+     content: "|";
+     display: block;
+     position: absolute;
+     left: 0;
+    top: 50%;
+     transform: translateY(-50%);
+     color: #999;
+    }
+
+   }
+  }
+ }
 }
 
 #menuModule {
@@ -86,16 +151,20 @@ $main-width: calc(100% - #{$right-width + $right-margin-left});
 
  &.menu-fixed {
   position: fixed;
-  top: var(--header-height);
+  top: $header-height;
   width: 21em;
   left: $main-width;
  }
 }
 
 footer {
-width: calc($main-width - 3.8em);
+width: calc(100% - 3.8em);
 margin: 0 1.9em;
 border-radius: 1em 1em 0 0  ;
 overflow: hidden;
 box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+
+@include media(">tablet") {
+ width: calc($main-width - 3.8em);
+}
 }

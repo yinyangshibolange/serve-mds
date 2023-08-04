@@ -1,3 +1,15 @@
 .name {
   width: 1em;
 }
+
+.timeline-time {
+  font-weight: bold;
+  font-size: 17px;
+  margin: 0.6em 0;
+}
+
+.timeline li > a {
+  padding: 0.5em 0;
+  display: flex;
+  padding-right: 2em;
+}

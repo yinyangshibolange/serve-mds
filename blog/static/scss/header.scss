@@ -12,14 +12,14 @@ header {
 }
 
 .header-slot {
-  height: var(--header-height);
+  height: $header-height;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  height: var(--header-height);
+  height: $header-height;
   padding: 0 2em;
 }
 
@@ -110,7 +110,15 @@ header .header-title {
   #navFold {
     display: block;
     position: absolute;
-    right: 0;
+    right: toem(32px);
+    @include size(32px, 32px);
+    overflow: hidden;
+    border-radius: toem(20px);
+
+    & > img {
+      width: 32px;
+      height: 32px;
+    }
   
     @include media(">tablet") {
       display: none;

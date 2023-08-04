@@ -1,0 +1,28 @@
+@import "../mixin.scss";
+#tagModule {
+ li {
+  display: inline-block;
+  margin-left: 1em;
+ }
+ a {
+  position: relative;
+  &.selected {
+   padding-left: 0.8em;
+   &::before {
+    content: '';
+    width: 0.5em;
+    height: 0.5em;
+    background: $primary-color;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+   }
+   &::after {
+    width: 100%;
+   }
+  }
+ }
+}

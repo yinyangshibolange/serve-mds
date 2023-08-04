@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
- <head></head>
+ <head>
+  <link rel="stylesheet" type="text/css" href="css/modules/tag-index.css">
+ </head>
  <body>
-  tag-index.html
-  <ul id="mainList">
-   <% if(tag_mds) { %>
+  <section id="tagModule" class="tag-module module">
+    <div class="module-title">标签</div>
+    <ul>
+     <% tags.forEach(function(item) { %>
+     <%- `<li><a class="hover-line ${item===tag ? 'selected' : ''}" href="/tag-index?tag=${item}">${item}</a></li>` %>
+     <% }) %>
+    </ul>
+   </section>
+<section class="module mt-20">
+ <div class="module-title"><%- tag %></div>
+ <ul id="mainList">
+  <% if(tag_mds) { %>
    <% tag_mds.forEach(function(item){ %>
-    <%- `<li>${item.title}</li>`  %>
+    <%- `<li><a class="hover-line" href="${item.index}">${item.title} </a></li>`  %>
    <% }) %>
-   <% } %>
-  </ul>
+  <% } %>
+ </ul>
+
+</section>
  </body>
 </html>

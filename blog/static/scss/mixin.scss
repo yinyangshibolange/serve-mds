@@ -1,5 +1,8 @@
 @import "../../../node_modules/include-media/dist/_include-media.scss";
 
+$primary-color: #ca1dac;
+$header-height: 3.5em;
+
 $content-width: 1200px;
 $font-size: 16px;
 $breakpoints: (
@@ -11,4 +14,8 @@ $breakpoints: (
 @mixin size($width, $height) {
  width: calc($width / $font-size) * 1em;
  height: calc($height / $font-size) * 1em;
+}
+
+@function toem($px) { 
+  @return calc($px / $font-size) * 1em;
 }

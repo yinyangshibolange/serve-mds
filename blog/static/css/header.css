@@ -10,14 +10,14 @@ header {
 }
 
 .header-slot {
-  height: var(--header-height);
+  height: 3.5em;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  height: var(--header-height);
+  height: 3.5em;
   padding: 0 2em;
 }
 
@@ -98,7 +98,15 @@ header .header-title {
 #navContainer #navFold {
   display: block;
   position: absolute;
-  right: 0;
+  right: 2em;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  border-radius: 1.25em;
+}
+#navContainer #navFold > img {
+  width: 32px;
+  height: 32px;
 }
 @media (min-width: 48.01em) {
   #navContainer #navFold {

@@ -5,10 +5,16 @@
 </head>
 <body>
 
-<div class=" module">
+<div class="timeline module">
     <ul>
         <% timeline.forEach(item => {%>
-        <%- `<li class="timeline-time">${item.time}</li>` + '<ul>' + item.mds.map(item1 => `<li><a href="${item1.index}">${item1.title}</a></li>`) + '</ul>' %>
+        <%- `<li class="timeline-time">${item.time}</li><ul>`  %>
+        <% if(Array.isArray(item.mds)) { %>
+        <% item.mds.forEach(item1 => { %>
+        <%- `<li><a class="hover-line flex justify-between align-center" href="${item1.index}"><span>${item1.title}</span><span>${item1.time}</span></a></li>` %>
+        <% }) %>
+        <% }%>
+        <%- '</ul>' %>
         <% }) %>
     </ul>
 </div>

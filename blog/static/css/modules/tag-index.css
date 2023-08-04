@@ -1,0 +1,25 @@
+#tagModule li {
+  display: inline-block;
+  margin-left: 1em;
+}
+#tagModule a {
+  position: relative;
+}
+#tagModule a.selected {
+  padding-left: 0.8em;
+}
+#tagModule a.selected::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  background: #ca1dac;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#tagModule a.selected::after {
+  width: 100%;
+}

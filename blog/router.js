@@ -5,7 +5,7 @@ module.exports = [{
  path: "htmls/auth.ejs",
 }, {
  nav: true,
- title: "首页",
+ title: "鸡",
  meta: "",
  index: ["/", "/index.html"],
  path: "htmls/index.ejs",
@@ -15,7 +15,7 @@ module.exports = [{
  // showTag: true,
 }, {
  nav: true,
- title: "专题",
+ title: "你",
  meta: "",
  index: ["/types", "/types.html"],
  path: "htmls/types.ejs",
@@ -32,7 +32,7 @@ module.exports = [{
  content: "tags",
 }, {
  nav: true,
- title: "归档",
+ title: "太",
  meta: "",
  index: ["/timeline", "/timeline.html"],
  path: "htmls/timeline.ejs",
@@ -41,7 +41,7 @@ module.exports = [{
  content: "timeline"
 }, {
  nav: true,
- title: "关于",
+ title: "美",
  meta: "",
  index: ["/about", "/about.html"],
  path: "htmls/about.ejs",

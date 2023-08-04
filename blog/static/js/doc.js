@@ -68,6 +68,8 @@
       }
      } else {
       setAActive(nav_items[index])
+      flag = true
+      break
      }
     }
     if (!flag) {

@@ -2,11 +2,16 @@
 <html>
  <head></head>
  <body>
-<section class="module">
+  <section class="module">
+   <div class="module-title">专题</div>
+   <%- type_module_html %>
+  </section>
+<section class="module mt-20">
+ <div class="module-title"><%- type %></div>
  <ul id="mainList">
   <% if(type_mds) { %>
   <%   type_mds.forEach(function(item){ %>
-   <%- `<li>${item.title}</li>`  %>
+   <%- `<li><a class="hover-line  color-333 flex justify-between" style="padding-right: 2em;" href="${item.index}"><span>${item.title}</span><span>${item.time}</span></a></li>`  %>
   <% }) %>
   <% } %>
  </ul>
