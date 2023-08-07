@@ -156,6 +156,17 @@ header .header-title {
   background: #f5f5f5;
   color: #333;
   font-weight: bold;
+  position: relative;
+}
+#navContainer #navList > li.menu-item-active > a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.2em;
+  background: #ca1dac;
 }
 #navContainer #navList > li > a {
   text-decoration: none;

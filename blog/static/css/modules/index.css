@@ -1,7 +1,58 @@
+@keyframes avatarTieSanKao {
+  0% {
+    background-position: calc(50% - 10px) 50%;
+  }
+  25% {
+    background-position: calc(50% + 10px) calc(50% + 17px);
+  }
+  50% {
+    background-position: calc(50% - 10px) 50%;
+  }
+  75% {
+    background-position: calc(50% + 10px) calc(50% - 17px);
+  }
+  100% {
+    background-position: calc(50% - 10px) 50%;
+  }
+}
 #mainList::after {
   clear: both;
 }
 
-#indexMudule {
+#main {
   padding: 0 2em;
+}
+
+#me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0;
+}
+#me .avatar {
+  width: 50%;
+  height: calc(21em / 2);
+  border-radius: 50%;
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  flex-shrink: 0;
+  background: url("/images/tiesankao.jpg");
+  background-size: 180% 130%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+#me .avatar:hover {
+  animation: avatarTieSanKao 1s ease-in-out infinite normal;
+}
+#me .contacts {
+  border-top: 0.1em solid #e3e3e3;
+}
+#me .contacts > a {
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+  height: 100%;
+}
+#me .contacts > a:hover {
+  background: #f2f2f2;
 }

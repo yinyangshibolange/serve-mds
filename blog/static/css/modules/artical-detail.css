@@ -7,27 +7,6 @@
   min-height: 200vh;
 }
 
-#main {
-  width: 100%;
-  padding: 0 1em;
-}
-@media (min-width: 48.01em) {
-  #main {
-    width: calc(100% - 23em);
-  }
-}
-
-#contentRightFix {
-  display: none;
-  width: 21em;
-  margin-left: 2em;
-}
-@media (min-width: 48.01em) {
-  #contentRightFix {
-    display: block;
-  }
-}
-
 #menuModule {
   height: calc(100vh - 5.3em);
   display: flex;
@@ -69,63 +48,6 @@
 #menu_tree > ul {
   padding: 0;
   margin: 0;
-}
-
-#typeModule .type-tree {
-  padding: 1em;
-}
-#typeModule .type-tree > ul {
-  padding: 0;
-  margin: 0;
-}
-#typeModule .type-tree > ul li {
-  padding: 0.15em 0;
-}
-#typeModule .type-tree > ul li > ul {
-  position: relative;
-}
-#typeModule .type-tree > ul li > ul::before {
-  content: "";
-  display: block;
-  height: 50%;
-  width: 20px;
-  border-left: 2px solid #333;
-  border-bottom: 2px solid #333;
-  border-bottom-left-radius: 0.25em;
-  position: absolute;
-  left: 15px;
-  top: 2px;
-}
-
-#tagModule {
-  margin-top: 0.7em;
-}
-#tagModule > ul {
-  overflow: hidden;
-  padding: 1.1em;
-  margin: 0;
-}
-#tagModule > ul > li {
-  display: inline-block;
-  max-width: 7em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  position: relative;
-}
-#tagModule > ul > li > a {
-  display: inline-block;
-}
-#tagModule > ul > li:not(:first-child) {
-  padding-left: 0.5em;
-}
-#tagModule > ul > li:not(:first-child)::before {
-  content: "|";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #999;
 }
 
 #menuModule {

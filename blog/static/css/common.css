@@ -1,3 +1,4 @@
+@import "//at.alicdn.com/t/c/font_3809364_w395q40k2b.css";
 .color-10 {
   color: #101010;
 }
@@ -2132,6 +2133,14 @@
   border-radius: 50px;
 }
 
+.w100p {
+  width: 100%;
+}
+
+.h100p {
+  height: 100%;
+}
+
 html,
 body {
   margin: 0;
@@ -2159,7 +2168,7 @@ body {
 }
 
 .module {
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
   border-radius: 0.5em;
   background: rgba(255, 255, 255, 0.7);
   box-sizing: border-box;
@@ -2278,4 +2287,82 @@ a.abtn {
   display: block;
   cursor: pointer;
   text-decoration: none;
+}
+
+#main {
+  width: 100%;
+  padding: 0 1em;
+}
+@media (min-width: 48.01em) {
+  #main {
+    width: calc(100% - 23em);
+  }
+}
+
+#contentRightFix {
+  display: none;
+  width: 21em;
+  margin-left: 2em;
+}
+@media (min-width: 48.01em) {
+  #contentRightFix {
+    display: block;
+  }
+}
+
+#typeModule .type-tree {
+  padding: 1em;
+}
+#typeModule .type-tree > ul {
+  padding: 0;
+  margin: 0;
+}
+#typeModule .type-tree > ul li {
+  padding: 0.15em 0;
+}
+#typeModule .type-tree > ul li > ul {
+  position: relative;
+}
+#typeModule .type-tree > ul li > ul::before {
+  content: "";
+  display: block;
+  height: 50%;
+  width: 20px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  border-bottom-left-radius: 0.25em;
+  position: absolute;
+  left: 15px;
+  top: 2px;
+}
+
+#tagModule {
+  margin-top: 0.7em;
+}
+#tagModule > ul {
+  overflow: hidden;
+  padding: 1.1em;
+  margin: 0;
+}
+#tagModule > ul > li {
+  display: inline-block;
+  max-width: 7em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+#tagModule > ul > li > a {
+  display: inline-block;
+}
+#tagModule > ul > li:not(:first-child) {
+  padding-left: 0.5em;
+}
+#tagModule > ul > li:not(:first-child)::before {
+  content: "|";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
 }

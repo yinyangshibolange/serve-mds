@@ -4,9 +4,10 @@
   <link rel="stylesheet" href="css/modules/index.css">
  </head>
  <body>
- <section id="indexMudule" class="module">
+<section class="flex">
+ <section id="main" class="module">
   <ul id="mainList" class="root">
-    <% mds.forEach(function(item){ %>
+   <% mds.forEach(function(item){ %>
     <%- `<li class="md-card">
  <a href="${item.index}">
    <div class="md-card-banner">
@@ -19,11 +20,44 @@
    </a>
  </li>`
     %>
-    <% }); %>
-   </ul>
- 
-   <div class="list-title">推荐</div>
-   <ul id="recommandList"></ul>
+   <% }); %>
+  </ul>
+
+<!--  <div class="list-title">推荐</div>-->
+<!--  <ul id="recommandList"></ul>-->
  </section>
+
+ <section class="module-right" id="contentRightFix">
+  <section class="module" id="me">
+<div class="avatar">
+</div>
+   <div class="nickname mt-20 font-20">坤坤两年半</div>
+
+   <div class="flex  contacts mt-10">
+    <a class="abtn" href="https://github.com/yinyangshibolange"><i class="iconfont icon-github"></i></a>
+    <a class="abtn"><i class="iconfont icon-wechat"></i></a>
+    <a class="abtn"><i class="iconfont icon-email"></i></a>
+   </div>
+  </section>
+
+  <section id="recommand" class="module mt-20">
+
+  </section>
+
+  <section id="typeModule" class="type-module module">
+   <div class="module-title">分类</div>
+   <%- type_module_html %>
+  </section>
+  <section id="tagModule" class="tag-module module mt-20">
+   <div class="module-title">标签</div>
+   <ul>
+    <% tags.forEach(function(item) { %>
+     <%- `<li><a class="hover-line" href="/tag-index?tag=${item}">${item}</a></li>` %>
+    <% }) %>
+   </ul>
+  </section>
+
+ </section>
+</section>
  </body>
 </html>
