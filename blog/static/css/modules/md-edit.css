@@ -1,0 +1,155 @@
+body {
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+  min-height: auto !important;
+}
+
+#container {
+  margin: 0 !important;
+  width: 100% !important;
+  background: #fff;
+  height: 100%;
+  display: flex;
+}
+
+#typeLeft {
+  flex-shrink: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 20em;
+  background: #339999;
+}
+#typeLeft .add-type-top {
+  color: #fff;
+  padding: 0.3em;
+  margin-top: 0.9em;
+  display: block;
+  width: fit-content;
+  border-radius: 1em;
+  cursor: pointer;
+}
+#typeLeft .add-type-top:hover {
+  background: #399f9f;
+}
+#typeLeft .submenu {
+  height: 0;
+  overflow: hidden;
+}
+#typeLeft .submenu-active {
+  height: fit-content;
+}
+#typeLeft ul {
+  width: 100%;
+  box-sizing: border-box;
+}
+#typeLeft li {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#typeLeft li:not(.submenu):hover {
+  background: #399f9f;
+}
+#typeLeft li.type-li::before {
+  font-family: "iconfont";
+  content: "\e975";
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.7em;
+  margin-right: 0.2em;
+  margin-left: 0.5em;
+  color: #fff;
+}
+#typeLeft li.type-li.active::before {
+  transform: rotate(90deg);
+}
+#typeLeft li > a {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0.7em 0.55em;
+  color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+#typeLeft li > a.li-title {
+  flex: 1;
+}
+#typeLeft li .add-type {
+  color: #fff;
+  cursor: pointer;
+}
+#typeLeft li .add-md {
+  color: #fff;
+  cursor: pointer;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
+#editRight {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#typeForm .dialog-content {
+  padding: 2.1em;
+}
+
+.form_item_pass {
+  display: flex;
+  align-items: center;
+}
+.form_item_pass label {
+  margin-right: 0.3em;
+}
+
+.upload-image-controller {
+  position: relative;
+  border-radius: 1em;
+  border: 1px solid #666;
+  width: 10em;
+  height: 10em;
+  overflow: hidden;
+  display: inline-block;
+}
+.upload-image-controller::before {
+  content: "+";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-size: 2em;
+  z-index: 1;
+}
+.upload-image-controller .show {
+  display: block;
+}
+.upload-image-controller .hidden {
+  display: none;
+}
+.upload-image-controller > input {
+  width: 10em;
+  height: 10em;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.upload-image-controller > img {
+  width: 10em;
+  height: 10em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  object-fit: scale-down;
+}

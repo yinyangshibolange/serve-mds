@@ -1,7 +1,8 @@
 @import "./mixin.scss";
 @import "./color.scss";
 @import "./flex.scss";
-
+@import "./scroll.scss";
+@import "./mouse.scss";
 @import "//at.alicdn.com/t/c/font_3809364_w395q40k2b.css";
 
 
@@ -88,22 +89,25 @@ body {
  background: rgba(255,255,255,0.7);
  box-sizing: border-box;
  overflow: hidden;
+
  .module-title {
   font-size: 1.3em;
   font-weight: bold;
   padding: 1em 1em 1em 2em;
   border-bottom: 0.1em solid #f2f2f2;
   position: relative;
+  &::before {
+   content: '';
+   width: 0.3em;
+   height: 100%;
+   position: absolute;
+   background: #0a3069;
+   left: 0;
+   top: 0;
+  }
+
  }
- .module-title::before {
-  content: '';
-  width: 0.3em;
-  height: 100%;
-  position: absolute;
-  background: #0a3069;
-  left: 0;
-  top: 0;
- }
+
 }
 
 ul {
@@ -212,6 +216,12 @@ a.abtn {
  text-decoration: none;
 }
 
+a.abtn-flex {
+ display: flex;
+ cursor: pointer;
+ text-decoration: none;
+}
+
 
 #main {
  width: 100%;
@@ -291,5 +301,39 @@ a.abtn {
 
    }
   }
+ }
+}
+
+@keyframes fadeIn {
+ 0% {
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
+}
+
+.dialog {
+ display: none;
+ .dialog-mask {
+  position: fixed;
+  z-index: $dialog-zindex;
+  background: rgba(0,0,0,0.3);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: fadeIn 0.3s ease-in-out;
+ }
+
+ .dialog-content {
+  position: fixed;
+  z-index: $dialog-zindex + 1;
+  background: #fff;
+  border-radius: 1.3em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 0.3s ease-in-out;
  }
 }

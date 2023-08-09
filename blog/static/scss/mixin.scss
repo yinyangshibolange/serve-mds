@@ -1,5 +1,8 @@
 @import "../../../node_modules/include-media/dist/_include-media.scss";
 
+
+$dialog-zindex: 999;
+
 $right-width: 21em;
 $right-margin-left: 2em;
 $main-width: calc(100% - #{$right-width + $right-margin-left});

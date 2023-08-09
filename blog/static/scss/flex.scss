@@ -12,7 +12,7 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
-	
+
 }
 
 .justify-end {
@@ -44,7 +44,7 @@
 	align-items: flex-end;
 	flex-direction: row;
 }
-	
+
 .flex-center {
 	display: flex;
 	justify-content: center;
@@ -62,4 +62,8 @@
 }
 .flex-column {
 	flex-direction: column;
+}
+
+.flex-shrink-0 {
+	flex-shrink: 0;
 }

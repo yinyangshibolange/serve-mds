@@ -1,0 +1,26 @@
+.scroll-999::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-999::-webkit-scrollbar-track {
+  width: 6px;
+  background: transparent;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+.scroll-999::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 147, 153, 0.3);
+  background-clip: padding-box;
+  min-height: 28px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.scroll-999::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(144, 147, 153, 0.5);
+}

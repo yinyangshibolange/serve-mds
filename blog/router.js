@@ -10,7 +10,7 @@ module.exports = [{
  meta: "",
  index: ["/md-edit", "/md-edit.html"],
  path: "htmls/md-edit.ejs",
- needCookies: true,
+ need_password: true,
 }, {
  nav: true,
  title: "鸡",
