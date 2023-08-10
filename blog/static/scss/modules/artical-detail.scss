@@ -1,10 +1,17 @@
 @import "../mixin.scss";
 
-
-
-#container {
- display: flex;
+.detail-banner {
+ width: 100vw;
+ position: relative;
+ top: -1em;
+ left: -1.9em;
+ & > img {
+  width: 100%;
+  height: auto;
+ }
 }
+
+
 
 #markdown_container {
  width: 100%;

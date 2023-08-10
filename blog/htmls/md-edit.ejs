@@ -13,7 +13,7 @@
     <section id="typeLeft" class="scroll-999">
         <div class="flex">
             <a class="add-type add-type-top" data-type="">+添加分类</a>
-            <a class="add-md add-type-top" data-type="">+添加文章</a>
+            <a class="add-md add-type-top" data-type="" href="/md-edit.html">+添加文章</a>
         </div>
         <div class="md-menu">
             <%- editMenu %>
@@ -56,7 +56,9 @@
                 <div class="pure-u-1 mt-10">
                     <div class="form_item_pass">
                         <label for="desp">描述</label>
-                        <textarea id="desp" name="desp" class="flex-1" placeholder="请输入描述" rows="5"  value="<%- mdObj.desp %>"></textarea>
+                        <textarea id="desp" name="desp" class="flex-1" placeholder="请输入描述" rows="5">
+
+                        </textarea>
                     </div>
                 </div>
 
@@ -67,7 +69,7 @@
                 </div>
                 <div class="pure-u-1-2 form_item_pass mt-10">
                     <label for="type">分类</label>
-                    <input id="type" name="type"  placeholder=""  readonly  value="<%- mdObj.type %>">
+                    <input id="type" name="type"  placeholder=""    value="<%- type %>">
                 </div>
 
                 <div class="pure-u-1 form_item_pass mt-10">
@@ -77,22 +79,25 @@
 
                 <div class="pure-u-1 form_item_pass mt-10">
                     <label for="banner">封面</label>
-                    <div class="upload-image-controller">
+                    <div id="uploadController" class="upload-image-controller">
                         <input type="file" name="banner" id="banner" accept="image/*">
                         <img id="bannerShow" src="<%- mdObj.banner %>" alt="<%- mdObj.banner %>">
+                        <%- mdObj.banner ? `<input type="text" id="oldBanner" name="oldBanner" style="display: none" value="${mdObj.banner}">` : '' %>
                     </div>
                 </div>
 
                 <div class="pure-u-1-2 form_item_pass mt-10">
                     <label for="recommend">是否推荐</label>
-                    <jelly-switch id="recommend" name="recommend" <%- mdObj.recommend ? 'checked' : '' %>></jelly-switch>
+                    <input type="checkbox" id="recommend" name="recommend" value="<%-mdObj.recommend%>" <%- mdObj.recommend ? 'checked' : '' %> style="display: none" >
+                    <jelly-switch  onToggle="handleToggle('recommend')" <%- mdObj.recommend ? 'checked' : '' %>></jelly-switch>
                 </div>
 
 
 
                 <div class="pure-u-1-2 form_item_pass mt-10">
                     <label for="istop">是否置顶</label>
-                    <jelly-switch id="istop" name="istop" <%- mdObj.istop ? 'checked' : '' %>></jelly-switch>
+                    <input type="checkbox" id="istop" name="istop" value="<%-mdObj.istop%>" <%- mdObj.istop ? 'checked' : '' %>  style="display: none">
+                    <jelly-switch  onToggle="handleToggle('istop')" <%- mdObj.istop ? 'checked' : '' %>></jelly-switch>
                 </div>
             </div>
 
@@ -104,6 +109,10 @@
 
             <div id="editor" class="mt-20"></div>
             <button class="submit" type="submit">提交</button>
+
+            <% if(mdObj.title){ %>
+            <%- `<a href="/api/admin/deleteMd?type=${mdObj.type||''}&title=${mdObj.title||''}" type="danger">删除</a>` %>
+            <% } %>
         </form>
     </section>
 
@@ -142,6 +151,8 @@
 
     });
 
+    $("#desp").val(`<% if(mdObj.desp) { %><%-  mdObj.desp.replace(/`/g, '\\`') %><%}%>`)
+
     function img2Base64(input_file, get_data) {
         /*input_file：文件按钮对象*/
         /*get_data: 转换成功后执行的方法*/
@@ -173,7 +184,62 @@
         img2Base64(bannerFile, function(data) {
             $("#bannerShow").attr("src", data)
         })
+        $("#uploadController #oldBanner").remove()
     })
+
+   function handleToggle(id) {
+       var event = window.event || arguments[0];
+       $(`#${id}`).attr('checked', event.detail.value).val(event.detail.value)
+   }
+
+  const type =  `<%- type %>`
+
+    const title = `<%- title %>`
+let firstDom
+    if(type) {
+        let subType = '', typelis = $("#typeLeft .md-menu ul > li.type-li")
+        type.split("-").forEach(item => {
+            if(subType) {
+                subType = subType + '-' + item
+            } else {
+                subType = item
+            }
+            for(let i = 0;i < typelis.length; i++) {
+                    const typeli = typelis[i]
+                if(typeli.dataset.type === subType) {
+                    firstDom = $(typeli)[0]
+                    $(typeli).addClass("active")
+                    const submenuNode = $(typeli).next()
+                    submenuNode.addClass("submenu-active")
+                    break
+                }
+            }
+
+        })
+        let mdlis = $("#typeLeft .md-menu ul > li.md-li")
+        for(let i = 0;i < mdlis.length; i++) {
+            const mdli = mdlis[i]
+            if(mdli.dataset.type === subType && mdli.dataset.title === title) {
+                firstDom = $(mdli)[0]
+                $(mdli).addClass("active")
+                break
+            }
+        }
+
+
+    } else {
+        let mdlis = $("#typeLeft .md-menu > ul.root > li.md-li")
+        for(let i = 0;i < mdlis.length; i++) {
+            const mdli = mdlis[i]
+            if(mdli.dataset.title === title) {
+                firstDom = $(mdli)[0]
+                $(mdli).addClass("active")
+                break
+            }
+        }
+    }
+
+    firstDom.scrollIntoView({ behavior: "smooth"});
 
 </script>
 </body>

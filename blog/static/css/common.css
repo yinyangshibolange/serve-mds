@@ -2275,9 +2275,6 @@ ul.root {
 .md-card .md-card-title {
   font-size: 0.9em;
   font-weight: bold;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
   width: 100%;
 }
 .md-card .md-card-other {

@@ -2,12 +2,15 @@
 title: 博客系统功能介绍
 author: 程序员的快乐生活
 desp: 挑选了一些具有较强兼容性的WEB API进行说明。Beacon 用于发送异步和非阻塞请求到服务器
-time: 2023-3-20 17:06:00
+time: 2023-08-10
 tag: 前端API
+banner: /uploads/banners/9i9FCHxRun9tGtSdDFVGkE_L.jpeg
 recommend: true
-banner: http://rqisd4yi1.hd-bkt.clouddn.com/brodchannel.drawio.png
 istop: true
 ---
+
+
+5adfasdfa
 
 # 博客系统功能介绍
 

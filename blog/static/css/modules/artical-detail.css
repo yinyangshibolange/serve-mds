@@ -1,5 +1,12 @@
-#container {
-  display: flex;
+.detail-banner {
+  width: 100vw;
+  position: relative;
+  top: -1em;
+  left: -1.9em;
+}
+.detail-banner > img {
+  width: 100%;
+  height: auto;
 }
 
 #markdown_container {

@@ -5,24 +5,32 @@
   <%- extraHeads %>
  </head>
  <body>
-  <%- markdownHtml %>
-<section id="contentRightFix">
- <section id="typeModule" class="type-module module">
-  <div class="module-title">分类</div>
- <%- type_module_html %>
- </section>
- <section id="tagModule" class="tag-module module">
-  <div class="module-title">标签</div>
-  <ul>
-   <% tags.forEach(function(item) { %>
-   <%- `<li><a class="hover-line" href="/tag-index?tag=${item}">${item}</a></li>` %>
-   <% }) %>
-  </ul>
- </section>
- <section id="menuModule" class="module">
-  <div class="module-title">目录</div>
-  <%- mdMenuModuleHtml %>
- </section>
+<div class="detail-banner">
+ <img src="<%- mdObj.banner %>" alt="<%- mdObj.banner %>">
+</div>
+
+<div class="w100p flex">
+
+ <%- markdownHtml %>
+ <section id="contentRightFix">
+  <section id="typeModule" class="type-module module">
+   <div class="module-title">分类</div>
+   <%- type_module_html %>
+  </section>
+  <section id="tagModule" class="tag-module module">
+   <div class="module-title">标签</div>
+   <ul>
+    <% tags.forEach(function(item) { %>
+     <%- `<li><a class="hover-line" href="/tag-index?tag=${item}">${item}</a></li>` %>
+    <% }) %>
+   </ul>
+  </section>
+  <section id="menuModule" class="module">
+   <div class="module-title">目录</div>
+   <%- mdMenuModuleHtml %>
+  </section>
+</div>
+
  <script >
   $(document).ready(function() {
    let $menuRect ,headerHeight,MenuTop,MenuLeft

@@ -20,7 +20,7 @@
 }
 
 #main {
-  padding: 0 2em;
+  padding: 0 1em 1em 1em !important;
 }
 
 #me {
@@ -55,4 +55,10 @@
 }
 #me .contacts > a:hover {
   background: #f2f2f2;
+}
+
+.md-card-banner > img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
 }

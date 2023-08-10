@@ -39,8 +39,9 @@ body {
   height: 0;
   overflow: hidden;
 }
-#typeLeft .submenu-active {
+#typeLeft .submenu.submenu-active {
   height: fit-content;
+  background: #218787;
 }
 #typeLeft ul {
   width: 100%;
@@ -52,6 +53,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #999;
+}
+#typeLeft li.active {
+  background: #218787;
 }
 #typeLeft li:not(.submenu):hover {
   background: #399f9f;
@@ -66,8 +71,16 @@ body {
   margin-left: 0.5em;
   color: #fff;
 }
+#typeLeft li.type-li.active > a {
+  color: #fff;
+  font-weight: bold;
+}
 #typeLeft li.type-li.active::before {
   transform: rotate(90deg);
+}
+#typeLeft li.md-li.active > a {
+  color: #fff;
+  font-weight: bold;
 }
 #typeLeft li > a {
   display: block;
@@ -75,9 +88,10 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   padding: 0.7em 0.55em;
-  color: #fff;
   cursor: pointer;
   box-sizing: border-box;
+  color: #e5e5e5;
+  text-decoration: none;
 }
 #typeLeft li > a.li-title {
   flex: 1;

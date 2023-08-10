@@ -1,11 +1,15 @@
+function getQueryString (name, url = window.location.href) {
+    if (!url || !name) return null
+    var reg = new RegExp("([\?&])" + name + "=([^&]*)(&|$)", "i");
+    var r = url.match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+}
+
+window.getQueryString = getQueryString
+
 $(document).ready(function() {
-    function getQueryString (name, url = window.location.href) {
-        if (!url || !name) return null
-        var reg = new RegExp("([\?&])" + name + "=([^&]*)(&|$)", "i");
-        var r = url.match(reg);
-        if (r != null) return unescape(r[2]);
-        return null;
-    }
+
     function NewPointer(size, background) {
         var mouse_center = $("<div></div>")
         mouse_center.css("position", 'fixed')

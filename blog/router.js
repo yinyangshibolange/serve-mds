@@ -4,6 +4,7 @@ module.exports = [{
  meta: "",
  index: ["/auth", "/auth.html"],
  path: "htmls/auth.ejs",
+ 'Cache-Control': 'max-age=0'
 }, {
  title: "文章编辑",
  type: 'html',
@@ -11,6 +12,7 @@ module.exports = [{
  index: ["/md-edit", "/md-edit.html"],
  path: "htmls/md-edit.ejs",
  need_password: true,
+ 'Cache-Control': 'max-age=0'
 }, {
  nav: true,
  title: "鸡",
@@ -21,7 +23,8 @@ module.exports = [{
  showHeader: true,
  showFooter: true,
  // showType: true,
- // showTag: true,
+ // showTag: true,,
+  'Cache-Control': 'max-age=60'
 }, {
  nav: true,
  title: "你",
@@ -32,6 +35,7 @@ module.exports = [{
  showHeader: true,
  showFooter: true,
  content: "types",
+ 'Cache-Control': 'max-age=60'
 }, {
  title: "标签",
  type: 'html',
@@ -41,6 +45,7 @@ module.exports = [{
  showHeader: true,
  showFooter: true,
  content: "tags",
+ 'Cache-Control': 'max-age=60'
 }, {
  nav: true,
  title: "太",
@@ -50,7 +55,8 @@ module.exports = [{
  path: "htmls/timeline.ejs",
  showHeader: true,
  showFooter: true,
- content: "timeline"
+ content: "timeline",
+ 'Cache-Control': 'max-age=60'
 }, {
  nav: true,
  title: "美",
@@ -60,6 +66,7 @@ module.exports = [{
  path: "htmls/about.ejs",
  showHeader: true,
  showFooter: true,
+ 'Cache-Control': 'max-age=60'
 }, {
  title: "分类",
  type: 'html',
@@ -68,6 +75,7 @@ module.exports = [{
  path: "htmls/type-index.ejs",
  showHeader: true,
  showFooter: true,
+ 'Cache-Control': 'max-age=60'
 }, {
  title: "标签",
  type: 'html',
@@ -76,6 +84,7 @@ module.exports = [{
  path: "htmls/tag-index.ejs",
  showHeader: true,
  showFooter: true,
+ 'Cache-Control': 'max-age=60'
 }, {
  title: "详情页",
  type: 'html',
@@ -87,4 +96,5 @@ module.exports = [{
  showType: true,
  showTag: true,
  content: "md",
+ 'Cache-Control': 'max-age=60'
 }]
