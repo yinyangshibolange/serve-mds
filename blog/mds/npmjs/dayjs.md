@@ -2,9 +2,8 @@
 title: dayjs
 author: hy
 desp: dayjs
-time: 2022-12-7 15:20:00
+time: 2022-12-07
 tag: dayjs
-banner: https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d2dfce242d65465a80a01c7eb56d294e~tplv-k3u1fbpfcp-watermark.image?" alt="20210204411652_oerTjp.jpg
 ---
 
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "//at.alicdn.com/t/c/font_3809364_w395q40k2b.css";
 .color-10 {
   color: #101010;
@@ -2176,13 +2177,36 @@
   height: 100%;
 }
 
+.one-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.two-line {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.three-line {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: AaDongYuanSong-2;
 }
 
 @font-face {
@@ -2243,6 +2267,19 @@ ul.root {
   margin-top: 1em;
   height: 7em;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.md-card.md-top::before {
+  content: "置顶";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #2a7fff;
+  color: #fff;
+  font-size: 0.7em;
+  padding: 0.3em;
+  border-radius: 0.3em;
 }
 .md-card > a {
   display: flex;
@@ -2435,4 +2472,22 @@ a.abtn-flex {
   top: 50%;
   transform: translate(-50%, -50%);
   animation: fadeIn 0.3s ease-in-out;
+}
+
+form {
+  margin: 0;
+}
+
+button[type=submit] {
+  background: #0aaeb3;
+  color: #f1f1f1;
+  border: 1px solid #f2f2f2;
+  outline: none;
+  border-radius: 0.5em;
+  padding: 0.3em 1.1em;
+  transition: all 0.3s ease-in-out;
+}
+button[type=submit]:hover {
+  background: #1abec3;
+  box-shadow: 0 0 2px #ccc;
 }

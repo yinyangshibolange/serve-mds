@@ -61,6 +61,9 @@ body {
 #typeLeft li:not(.submenu):hover {
   background: #399f9f;
 }
+#typeLeft li.type-li {
+  position: relative;
+}
 #typeLeft li.type-li::before {
   font-family: "iconfont";
   content: "\e975";
@@ -77,6 +80,28 @@ body {
 }
 #typeLeft li.type-li.active::before {
   transform: rotate(90deg);
+}
+#typeLeft li.type-li .type-btns {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  align-items: center;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+#typeLeft li.type-li .type-btns > a {
+  color: #d1d1d1;
+  text-decoration: none;
+}
+#typeLeft li.type-li .type-btns > a:hover {
+  color: #fff;
+}
+#typeLeft li.type-li:hover .type-btns {
+  display: flex;
 }
 #typeLeft li.md-li.active > a {
   color: #fff;
@@ -113,7 +138,10 @@ body {
 }
 
 #typeForm .dialog-content {
-  padding: 2.1em;
+  padding: 1.1em;
+}
+#typeForm .dialog-content .form_item_pass {
+  margin-top: 0.7em;
 }
 
 .form_item_pass {
@@ -166,4 +194,8 @@ body {
   left: 0;
   z-index: 2;
   object-fit: scale-down;
+}
+
+.editormd-fullscreen {
+  z-index: 10;
 }

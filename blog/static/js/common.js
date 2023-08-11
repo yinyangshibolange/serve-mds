@@ -8,8 +8,8 @@ function getQueryString (name, url = window.location.href) {
 
 window.getQueryString = getQueryString
 
-$(document).ready(function() {
 
+$(document).ready(function() {
     function NewPointer(size, background) {
         var mouse_center = $("<div></div>")
         mouse_center.css("position", 'fixed')
@@ -53,4 +53,6 @@ $(document).ready(function() {
     // if(message) {
     //     alert(decodeURIComponent(message))
     // }
+    let images = $(".lazyload");
+    lazyload(images);
 })

@@ -23,6 +23,7 @@
    <section id="typeForm" class="dialog">
        <div class="dialog-mask"></div>
           <div class="dialog-content">
+              <div class="dialog-header font-20">设置分类</div>
               <form action="/api/admin/postType" method="post" enctype="multipart/form-data">
                   <div class="form_item_pass">
                       <label for="type">分类名称</label>
@@ -32,7 +33,10 @@
                       <label for="parent">上级分类</label>
                       <input id="parent" name="parent"  readonly>
                   </div>
-                  <button class="submit" type="submit">提交</button>
+                  <div class="flex justify-center mt-12 ">
+                      <button class="submit " type="submit">提交</button>
+
+                  </div>
               </form>
           </div>
    </section>
@@ -99,15 +103,12 @@
                     <input type="checkbox" id="istop" name="istop" value="<%-mdObj.istop%>" <%- mdObj.istop ? 'checked' : '' %>  style="display: none">
                     <jelly-switch  onToggle="handleToggle('istop')" <%- mdObj.istop ? 'checked' : '' %>></jelly-switch>
                 </div>
+
+
             </div>
-
-
-
-
-
-
-
-            <div id="editor" class="mt-20"></div>
+            <div class="mt-10 ">
+                <div id="editor" ></div>
+            </div>
             <button class="submit" type="submit">提交</button>
 
             <% if(mdObj.title){ %>
@@ -141,7 +142,7 @@
     var editor = editormd("editor", {
         width: "100%",
         height: "100%",
-        markdown: `<% if(mdObj.content) { %><%-  mdObj.content.replace(/`/g, '\\`') %><%}%>`,     // dynamic set Markdown text
+        markdown: `<% if(mdObj.content) { %><%=mdObj.content.replace(/`/g, '\\`') %><%}%>`,     // dynamic set Markdown text
         path : "/lib/" , // Autoload modules mode, codemirror, marked... dependents libs path
 
 
@@ -238,8 +239,7 @@ let firstDom
             }
         }
     }
-
-    firstDom.scrollIntoView({ behavior: "smooth"});
+if(firstDom)   firstDom.scrollIntoView({ behavior: "smooth"});
 
 </script>
 </body>

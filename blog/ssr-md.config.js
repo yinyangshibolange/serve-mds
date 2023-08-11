@@ -23,8 +23,9 @@ module.exports = {
   target: 'static/css'
  }],
 
- base_csss: ['css/pure.min.css','css/common.css'],
- base_jss: ['js/jquery.min.js', 'js/common.js'],
+ base_csss: ['css/pure.min.css','css/common.css', 'plugins/nprogress/nprogress.css'],
+ base_jss: ['js/jquery.min.js', 'js/lazyload.min.js', 'plugins/nprogress/nprogress.js', 'js/common.js'],
+ body_top_jss: ['js/progress_init.js'],
  // 管理员可以对文件进行编辑，也可以编辑网站样式
  logo: 'images/logo.png',
  title: '坤文',
@@ -36,6 +37,9 @@ module.exports = {
  password_index: "auth", // 登录页面index
  layout: 'layout/layout.ejs',
  htmls: require("./router"),
- heads: ['<meta name="viewport" content="width=device-width, initial-scale=1">',`<link rel="shortcut icon" href="${favicon}">`],
+ heads: [
+     '<meta name="viewport" content="width=device-width, initial-scale=1">',
+  `<link rel="shortcut icon" href="${favicon}">`,
+ ],
 
 }

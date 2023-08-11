@@ -2,10 +2,13 @@
 title: 《每天学习一个API之getBoundingClientRect》
 author: 程序员的快乐生活
 desp: 本节目由流浪的坤少赞助
-time: 2023-2-15 15:56:00
+time: 2023-08-11
 tag: 前端API
-banner: /assets/images/mdn_logo.png
+banner: /uploads/banners/cQfPvyBsYhkAMSHHlVd7nJmG.png
+
+
 ---
+
 
 
 # Day.js
@@ -21,7 +24,7 @@ $ npm install dayjs
 
 ### CDN
 ```
-<script src="https://unpkg.com/dayjs/dist/dayjs.min.js"></script>
+&lt;script src=&#34;https://unpkg.com/dayjs/dist/dayjs.min.js&#34;&gt;&lt;/script&gt;
 ```
 
 ## 使用
@@ -34,15 +37,15 @@ const now = dayjs();
 使用Day.js实例，你可以使用更多的API进行日期和时间的操作：
 
 ```
-now.add(1, 'month');
-now.subtract(7, 'days');
-now.startOf('day');
+now.add(1, &#39;month&#39;);
+now.subtract(7, &#39;days&#39;);
+now.startOf(&#39;day&#39;);
 ```
 
 此外，你还可以使用Day.js实例格式化日期：
 
 ```
-now.format('DD/MM/YYYY HH:mm');
+now.format(&#39;DD/MM/YYYY HH:mm&#39;);
 ```
 
 ## 总结

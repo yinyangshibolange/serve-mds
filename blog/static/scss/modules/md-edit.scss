@@ -88,6 +88,7 @@ $md-menu-a-active-color: #fff;
     }
 
     &.type-li {
+      position: relative;
       &::before {
         font-family: 'iconfont';
         content: '\e975';
@@ -108,6 +109,31 @@ $md-menu-a-active-color: #fff;
             transform: rotate(90deg);
           }
         }
+
+      .type-btns {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        align-items: center;
+        justify-content: flex-end;
+        background: rgba(0,0,0,0.3);
+        padding: 0.5em;
+        border-radius: 0.5em;
+        & > a {
+          color: #d1d1d1;
+          text-decoration: none;
+          &:hover{
+            color: #fff;
+          }
+        }
+      }
+      &:hover {
+        .type-btns {
+          display: flex;
+        }
+      }
     }
     &.md-li {
       &.active {
@@ -165,7 +191,10 @@ $md-menu-a-active-color: #fff;
 
 #typeForm {
   .dialog-content {
-    padding: 2.1em;
+    padding: 1.1em;
+    .form_item_pass {
+      margin-top: 0.7em;
+    }
   }
 }
 
@@ -219,4 +248,8 @@ $md-menu-a-active-color: #fff;
     z-index: 2;
     object-fit: scale-down;
   }
+}
+
+.editormd-fullscreen {
+  z-index: 10;
 }
