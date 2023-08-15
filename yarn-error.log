@@ -1,0 +1,69 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\11924\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add postcss cssnano -D
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\11924\AppData\Local\Yarn\bin;C:\Program Files\dotnet\;C:\programes\HBuilderX;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Redis\;C:\Users\11924\anaconda3;C:\Users\11924\anaconda3\Library\mingw-w64\bin;C:\Users\11924\anaconda3\Library\bin;C:\Users\11924\anaconda3\Library\usr\bin;C:\Users\11924\anaconda3\Scripts;C:\Program Files\wkhtmltopdf\bin;C:\Program Files (x86)\Tencent\微信web开发者工具\dll;C:\Program Files\TortoiseGit\bin;C:\Users\11924\AppData\Roaming\nvm\;C:\Users\11924\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\11924\AppData\Local\Programs\Python\Python311\;C:\Users\1192;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\python;C:\Program Files\python\Scripts;C:\BtSoft\panel\script;C:\Users\11924\.cargo\bin;C:\Users\11924\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\11924\AppData\Local\Programs\Python\Python311\;C:\Users\11924\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2021.3.2\bin;C:\Users\11924\AppData\Local\Programs\Fiddler;C:\Program Files\JetBrains\WebStorm 2022.1.2\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2022.1.4\bin;C:\Program Files\JetBrains\PyCharm 2022.2.1\bin;C:\Program Files\JetBrains\WebStorm 2023.1\bin;C:\Program Files\JetBrains\PyCharm 2023.1\bin;C:\Users\11924\AppData\Local\atom\bin;C:\Users\11924\AppData\Local\GitHubDesktop\bin;C:\Users\11924\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\11924\Documents\demos\docsify-ssr-demo-master\bin;C:\Program Files\wkhtmltopdf\bin;C:\Users\11924\AppData\Roaming\npm;C:\Users\11924\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Python27;C:\Users\11924\.dotnet\tools;C:\Users\11924\Documents\demos\docsify-ssr-demo-master\node_modules\.bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.20.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\11924\AppData\Local\Yarn\Cache\v6\npm-ansi-styles-2.2.1-b432dd3358b634cf75e1e4664368240533c1ddbe-integrity\node_modules\ansi-styles\license' -> 'C:\Users\11924\Documents\demos\docsify-ssr-demo-master\node_modules\yargonaut\node_modules\ansi-styles\license'
+
+npm manifest: 
+  {
+    "name": "ssr-md",
+    "version": "1.0.9",
+    "main": "bin/ssr-md",
+    "bin": {
+      "ssr-md": "bin/ssr-md"
+    },
+    "author": "hongyu",
+    "license": "MIT",
+    "scripts": {
+      "start:blog": "cd blog &&  node main start",
+      "start": "node index"
+    },
+    "dependencies": {
+      "chalk": "^4.0.0",
+      "ejs": "^3.1.9",
+      "file-system-db": "^2.0.0",
+      "include-media": "^2.0.0",
+      "marked": "^5.0.1",
+      "marked-gfm-heading-id": "^3.0.3",
+      "md5": "^2.3.0",
+      "mime": "^3.0.0",
+      "multiparty": "^4.2.3",
+      "sass": "^1.64.1",
+      "urlencode": "^1.1.0",
+      "uuid": "^9.0.0",
+      "yargonaut": "^1.1.4",
+      "yargs": "^17.7.2"
+    },
+    "files": [
+      "bin",
+      "lib",
+      "static"
+    ],
+    "devDependencies": {
+      "jest": "^29.5.0"
+    },
+    "keywords": [
+      "ssr",
+      "markdown",
+      "doc",
+      "verify"
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
